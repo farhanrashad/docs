@@ -151,10 +151,6 @@ Before proceeding, ensure the following items are completed:
 
 ## Next Step
 
-Continue with the Workflow Guide to understand:
+Continue with the Workflow Guide:
 
-- Attendance fetching
-- Queue creation
-- Attendance processing
-- Queue status management
-- Attendance conversion logic
+➡️ [Workflow Guide](workflow.md)

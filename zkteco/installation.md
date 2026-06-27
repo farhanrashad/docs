@@ -97,9 +97,6 @@ After installing the module:
 
 ## Next Step
 
-Continue with the Configuration Guide to:
+Continue with the Configuration Guide:
 
-- Configure biometric devices
-- Create employee mappings
-- Test device connectivity
-- Start attendance synchronization
+➡️ [Configuration Guide](configuration.md)

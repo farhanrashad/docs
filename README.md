@@ -30,6 +30,18 @@ Whether you're getting started with a solution or looking for advanced configura
 
 ---
 
+## 📚 Applications
+
+Browse the available application documentation below.
+
+| Application | Description | Documentation |
+|------------|-------------|---------------|
+| ZKTeco Biometric Attendance Integration | Biometric attendance synchronization between ZKTeco devices and Odoo | [Open Documentation](zkteco/README.md) |
+
+> Additional application documentation will be added here as new solutions are published.
+
+---
+
 ## 🗂 Documentation Structure
 
 Each product documentation typically includes:
