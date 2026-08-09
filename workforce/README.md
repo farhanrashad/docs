@@ -4,6 +4,8 @@
 
 The Workforce Operations suite is the central documentation hub for the industrial HR stack in Odoo 18 Community. It covers the shared framework, shift planning, and shift attendance linkage in one maintained documentation set.
 
+This suite is designed to keep the core foundation lightweight while letting feature modules extend the app in a controlled way. The documentation below follows the same structure used by the feature packets: purpose, dependencies, menus, models, workflows, security, boundaries, and test coverage.
+
 ## Suite at a Glance
 
 | Module | Purpose | Page |
@@ -30,6 +32,19 @@ The Workforce Operations suite is the central documentation hub for the industri
 - Shift planning for factory and field teams
 - Attendance linkage for confirmed shift allocations
 - A suite structure that stays modular and Community-safe
+
+## Documentation Structure
+
+Every page in this suite includes:
+
+- Purpose and users
+- Dependencies and activation
+- Menus and configuration
+- Main models and workflows
+- Security and validation
+- Community boundary
+- Test scenarios
+- Future extensions
 
 ## Maintenance Notes
 
