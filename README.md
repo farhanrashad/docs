@@ -1,4 +1,6 @@
-# 📚 Dynexcel Documentation Hub
+# <img src="assets/dynexcel-logo-black.png" alt="Dynexcel" width="320" />
+
+**Dynexcel Documentation Hub**
 
 Welcome to the official documentation repository for **Dynexcel**.
 
