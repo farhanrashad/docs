@@ -39,6 +39,7 @@ Browse the available application documentation below.
 | Application | Description | Documentation |
 |------------|-------------|---------------|
 | ZKTeco Biometric Attendance Integration | Biometric attendance synchronization between ZKTeco devices and Odoo | [Open Documentation](zkteco/README.md) |
+| Workforce Operations Suite | Core workforce shell with shift planning and attendance documentation | [Open Documentation](workforce/README.md) |
 
 > Additional application documentation will be added here as new solutions are published.
 
