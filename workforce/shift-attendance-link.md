@@ -2,25 +2,53 @@
 
 # Shift Attendance Link
 
-## Overview
+## Purpose and Users
 
-Shift Attendance Link connects attendance entries to confirmed shift allocations and keeps shift context visible on attendance screens for supervisors and HR staff.
+`Shift Attendance Link` links Odoo attendances to confirmed shift allocations. It is optional so shift planning can run without attendance dependencies.
 
-## Key Responsibilities
+Target users are attendance officers, HR supervisors, and Workforce managers who need to know which planned shift an attendance belongs to.
 
-- Attendance-to-shift matching
-- Shift fields on attendance views
-- Optional companion module for shift planning
-- Clear attendance context for supervisors and HR users
+## Dependencies and Activation
 
-## Highlights
+- Depends on `Workforce Operations`, `Shift Planning`, and `hr_attendance`.
+- Activated from core settings through the `Shift Attendance Link` feature toggle.
+- Defines a `Shift Attendance` group, implying Workforce user and shift planning access.
 
-| Area | Description |
-|------|-------------|
-| Matching | Links attendance records to approved shift allocations |
-| Visibility | Shows shift context on attendance screens |
-| Dependency | Works on top of the shift planning module |
-| Navigation | Returns easily to the suite home and prior pages |
+## Menus and Configuration
+
+Operational menus appear only when installed and the user has the shift attendance group:
+
+- `Workforce Operations > Attendance > Attendances`
+
+No separate configuration menu is required in the current implementation.
+
+## Main Models and Workflows
+
+The module extends `hr.attendance` with shift allocation and shift template references. Attendance records can show and group by their matched shift allocation/template.
+
+Workflow:
+
+1. Confirm shift allocations in `Shift Planning`.
+2. Create or import employee attendance records through Odoo attendance.
+3. Assign or review the matching shift allocation on attendance.
+4. Use list/form/search views to audit attendance by shift.
+
+## Security and Validation
+
+The module keeps Odoo attendance overlap behavior intact. Shift fields and menus are visible only to the shift attendance group. Workforce managers can administer through inherited Workforce access.
+
+## Community Boundary
+
+This module depends on Community `hr_attendance`, not payroll. Late/early rules, grace periods, and penalty calculations should stay out of this module unless explicitly added in a future attendance rules extension.
+
+## Test Scenarios
+
+- Install after `Shift Planning` and `hr_attendance`.
+- Confirm Attendance menu appears under Workforce Operations.
+- Create a confirmed shift allocation and attendance for the same employee.
+- Verify attendance displays shift allocation and shift template fields.
+- Verify Odoo native attendance overlap rules still apply.
+- Confirm menus/fields are hidden for users without the shift attendance group.
 
 ## Related Pages
 
@@ -28,8 +56,6 @@ Shift Attendance Link connects attendance entries to confirmed shift allocations
 - [Workforce Operations](workforce-operations.md)
 - [Shift Planning](shift-planning.md)
 
-## Notes
+## Future Extensions
 
-- Built for Odoo 18 Community.
-- Meant to extend the shift planning module.
-- Maintained in the `docs` repository.
+Add automatic matching by check-in time, grace periods, late/early marking, missing checkout handling, and night-shift matching windows.

@@ -2,25 +2,67 @@
 
 # Shift Planning
 
-## Overview
+## Purpose and Users
 
-Shift Planning manages shift templates, team allocation, dated allocations, weekly rotations, double shifts, and payroll-safe schedule generation for factory and field teams.
+`Shift Planning` manages industrial shift planning for workers. It supports shift templates, worker teams, dated allocations, weekly rotation plans, multiple shifts per day, double shifting, night shifts crossing midnight, and generated employee working schedules.
 
-## Key Responsibilities
+Target users are shift supervisors, HR planners, production managers, and Workforce managers.
 
-- Shift templates and teams
-- Rotation plans and allocation generation
-- Non-overlap checks and night-shift support
-- Schedule generation for operational teams
+## Dependencies and Activation
 
-## Highlights
+- Depends on `Workforce Operations`, `hr_contract`, and `hr_work_entry_contract`.
+- Activation uses the `Shift Planning` feature from the core app.
+- Module is not an app; menus live under `Workforce Operations`.
 
-| Area | Description |
-|------|-------------|
-| Templates | Reusable shifts with defined hours and rules |
-| Allocation | Team-based and date-based assignments |
-| Rotation | Weekly rotation support for fair scheduling |
-| Safety | Non-overlap validation and payroll-safe flow |
+## Menus and Configuration
+
+Operational menus:
+
+- `Workforce Operations > Shift Planning > Allocations`
+- `Workforce Operations > Shift Planning > Rotations`
+- `Workforce Operations > Shift Planning > Regenerate Schedules`
+- `Workforce Operations > Reports > Shift Planning > Shift Allocation Report`
+
+Configuration menus:
+
+- `Workforce Operations > Configuration > Shift Planning > Teams`
+- `Workforce Operations > Configuration > Shift Planning > Shift Templates`
+
+## Main Models and Workflows
+
+Main models:
+
+- `dx.shift.template`: named shift definitions with time range, break, paid hours, color, company, and work entry type.
+- `dx.shift.team`: employee groups for bulk planning.
+- `dx.shift.allocation`: dated employee shift assignments with planned start/stop, state, rotation source, and generated schedule lines.
+- `dx.shift.rotation` and `dx.shift.rotation.line`: weekly rotation plans and sequence lines.
+- Wizards for rotation allocation generation and schedule regeneration.
+
+Core workflow:
+
+1. Configure shift templates and teams.
+2. Create manual allocations or generate allocations from a rotation plan.
+3. Confirm allocations after overlap/night-shift validation.
+4. Regenerate schedules for the target period where needed.
+5. Review allocations in list/calendar/pivot/report views.
+
+## Security and Validation
+
+Shift planning users can read shift data. Workforce managers can create, confirm, cancel, regenerate, and manage configuration. Allocations must block overlapping time ranges for the same employee unless the conflicting allocation is cancelled. Non-overlapping double shifts are allowed.
+
+## Community Boundary
+
+The module uses Community HR contracts, work entries, and resource calendars for safe planning visibility. It must not require Enterprise payroll salary computation. Old confirmed/payroll-processed periods should not be silently rewritten.
+
+## Test Scenarios
+
+- Create morning, evening, and night templates.
+- Generate one month of weekly rotation allocations.
+- Confirm double shift on the same day when times do not overlap.
+- Reject overlapping allocations.
+- Confirm night shift date handling across midnight.
+- Regenerate schedule for a date range and verify generated attendance/calendar lines.
+- Confirm menus disappear when `Shift Planning` is disabled.
 
 ## Related Pages
 
@@ -28,8 +70,6 @@ Shift Planning manages shift templates, team allocation, dated allocations, week
 - [Workforce Operations](workforce-operations.md)
 - [Shift Attendance Link](shift-attendance-link.md)
 
-## Notes
+## Future Extensions
 
-- Built for Odoo 18 Community.
-- Intended as a companion to the core Workforce Operations app.
-- Maintained in the `docs` repository.
+Add grace periods, skill-based shift assignment, capacity planning, supervisor approval rules, and shift exchange workflows in separate extensions if needed.

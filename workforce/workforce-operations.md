@@ -2,25 +2,59 @@
 
 # Workforce Operations
 
-## Overview
+## Purpose and Users
 
-Workforce Operations is the foundation of the suite. It provides the shared application shell, root menus, and configuration hub used by the shift planning and attendance modules.
+`Workforce Operations` is the shared app for Odoo 18 Community. It provides the app tile, root menu, global Settings block, common security groups, and a stable menu/configuration framework for all workforce feature modules.
 
-## Key Responsibilities
+Target users are HR officers, workforce supervisors, and HR/workforce managers who need one central place for industrial workforce operations.
 
-- Shared Workforce app shell
-- Configuration hub for workforce modules
-- Base security groups and settings
-- Entry point for the suite documentation
+## Dependencies and Activation
 
-## Highlights
+- Depends on `hr` only.
+- Installed as the only application module in the suite.
+- Provides root menu `Workforce Operations`.
+- Provides shared menus `Reports`, `Configuration`, and `Configuration > Settings`.
 
-| Area | Description |
-|------|-------------|
-| App Shell | Single root entry point for workforce apps |
-| Configuration | Centralized settings for dependent modules |
-| Security | Foundational access groups and configuration |
-| Navigation | Home, previous, and next links across pages |
+## Feature Flags and Groups
+
+Core groups:
+
+- `Workforce User`: base Workforce user.
+- `Workforce Manager`: Workforce manager/admin; implies Workforce user and feature groups as modules install them.
+- `Shift Planning Access`: enables the installed shift-planning feature.
+
+Settings toggles:
+
+- `Shift Planning`
+- `Shift Attendance Link`
+- `Employee Self Service`
+- `Overtime Rules`
+- `Leave Encashment`
+- `Overtime Leave Balance`
+- `Daily Wage / Piece Rate`
+- `Loans, Advances & Deductions`
+- `Contractor Labour Management`
+- `Full & Final Settlement`
+
+## Menus and Configuration
+
+`Workforce Operations` is visible to Workforce users and managers. `Reports`, `Configuration`, and `Settings` are manager-only. Feature modules add their operational menus under the root menu and their setup menus under `Workforce Operations > Configuration`.
+
+## Security Rules
+
+The core module owns suite-level groups only. It does not grant broad access to feature models. Feature modules must define their own access CSV and record rules, usually read-only for feature users and full CRUD for Workforce managers.
+
+## Community Boundary
+
+The core module must not depend on `hr_attendance`, payroll, accounting, or feature modules. It should stay a lightweight foundation to avoid dependency cycles.
+
+## Test Scenarios
+
+- Install `Workforce Operations` alone.
+- Confirm one app tile named `Workforce Operations` appears.
+- Confirm Settings shows all feature toggles.
+- Confirm Configuration and Settings menus are manager-only.
+- Confirm no attendance, payroll, shift, wage, overtime, employee self-service, leave encashment, leave conversion, or deduction models are required by the core module.
 
 ## Related Pages
 
@@ -28,8 +62,6 @@ Workforce Operations is the foundation of the suite. It provides the shared appl
 - [Shift Planning](shift-planning.md)
 - [Shift Attendance Link](shift-attendance-link.md)
 
-## Notes
+## Future Extensions
 
-- Built for Odoo 18 Community.
-- Designed to stay modular and suite-friendly.
-- Maintained in the `docs` repository.
+Future modules should add a `module_*` toggle in core settings, define one feature group, add operational/configuration/report menus under the core app, and avoid changing core dependencies.

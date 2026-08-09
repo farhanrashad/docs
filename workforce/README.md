@@ -8,9 +8,9 @@ The Workforce Operations suite is the central documentation hub for the industri
 
 | Module | Purpose | Page |
 |--------|---------|------|
-| Workforce Operations | Core framework, root menus, and shared configuration | [Open](workforce-operations.md) |
-| Shift Planning | Shift templates, team allocation, and rotation planning | [Open](shift-planning.md) |
-| Shift Attendance Link | Attendance-to-shift matching and attendance context | [Open](shift-attendance-link.md) |
+| Workforce Operations | Lightweight shared app shell, settings, and suite-level groups | [Open](workforce-operations.md) |
+| Shift Planning | Shift templates, teams, allocations, rotations, and schedules | [Open](shift-planning.md) |
+| Shift Attendance Link | Optional attendance-to-shift matching extension | [Open](shift-attendance-link.md) |
 
 ## Documentation Flow
 
@@ -26,12 +26,14 @@ The Workforce Operations suite is the central documentation hub for the industri
 ## What This Suite Covers
 
 - A shared app shell for workforce modules
-- A central configuration hub
+- A central configuration hub with feature toggles
 - Shift planning for factory and field teams
 - Attendance linkage for confirmed shift allocations
+- A suite structure that stays modular and Community-safe
 
 ## Maintenance Notes
 
 - This section is maintained in the `docs` repository.
 - Each page includes home, previous, and next links for easy navigation.
 - Content is organized to stay aligned with the ZKTeco documentation style.
+- The docs reflect the feature packets for the current workforce suite.
