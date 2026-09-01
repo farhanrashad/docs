@@ -63,7 +63,6 @@ const config = {
   themeConfig: {
     image: 'img/dynexcel-logo-black.png',
     navbar: {
-      title: 'Dynexcel Docs',
       logo: {
         alt: 'Dynexcel',
         src: 'img/dynexcel-logo-black.png',
