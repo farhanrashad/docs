@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-odoo18 docs-version-current docs-doc-page docs-doc-id-integrations/de_zkteco_attend/workflow" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">workflow | Dynexcel Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.dynexcel.com/img/dynexcel-logo-black.png"><meta data-rh="true" name="twitter:image" content="https://docs.dynexcel.com/img/dynexcel-logo-black.png"><meta data-rh="true" property="og:url" content="https://docs.dynexcel.com/odoo/18/integrations/de_zkteco_attend/workflow/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-odoo18-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-odoo18-current"><meta data-rh="true" property="og:title" content="workflow | Dynexcel Documentation"><meta data-rh="true" name="description" content="← Back to Home"><meta data-rh="true" property="og:description" content="← Back to Home"><link data-rh="true" rel="icon" href="/img/dynexcel-logo-black.png"><link data-rh="true" rel="canonical" href="https://docs.dynexcel.com/odoo/18/integrations/de_zkteco_attend/workflow/"><link data-rh="true" rel="alternate" href="https://docs.dynexcel.com/odoo/18/integrations/de_zkteco_attend/workflow/" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.dynexcel.com/odoo/18/integrations/de_zkteco_attend/workflow/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ZKTeco Biometric Attendance","item":"https://docs.dynexcel.com/odoo/18/integrations/de_zkteco_attend/"},{"@type":"ListItem","position":2,"name":"workflow","item":"https://docs.dynexcel.com/odoo/18/integrations/de_zkteco_attend/workflow"}]}</script><link rel="stylesheet" href="/assets/css/styles.77aa5478.css">
+<script src="/assets/js/runtime~main.e2a6488b.js" defer="defer"></script>
+<script src="/assets/js/main.c7c78e59.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/dynexcel-logo-black.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/dynexcel-logo-black.png" alt="Dynexcel" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/dynexcel-logo-black.png" alt="Dynexcel" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Dynexcel Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item version-switcher"><span class="version-switcher__label">Version</span><select aria-label="Select Odoo documentation version"><option value="19">Odoo <!-- -->19</option><option value="18" selected="">Odoo <!-- -->18</option></select><a class="version-switcher__fallback" aria-label="Odoo 18" href="/odoo/18/integrations/de_zkteco_attend/workflow/">Odoo <!-- -->18</a></div><a href="https://dynexcel.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Dynexcel.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/odoo/18/"><span class="linkLabel_WmDU">Odoo 18 Home</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/odoo/18/hr-workforce/"><span class="categoryLinkLabel_W154">HR &amp; Workforce</span></a><button aria-label="Expand sidebar category &#x27;HR &amp; Workforce&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/odoo/18/integrations/de_zkteco_attend/"><span class="categoryLinkLabel_W154">Integrations</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/odoo/18/integrations/de_zkteco_attend/"><span class="categoryLinkLabel_W154">ZKTeco Biometric Attendance</span></a><button aria-label="Collapse sidebar category &#x27;ZKTeco Biometric Attendance&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/de_zkteco_attend/installation/"><span class="linkLabel_WmDU">Installation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/de_zkteco_attend/configuration/"><span class="linkLabel_WmDU">Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/odoo/18/integrations/de_zkteco_attend/workflow/"><span class="linkLabel_WmDU">workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/de_zkteco_attend/architecture/"><span class="linkLabel_WmDU">architecture</span></a></li></ul></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Integrations</span></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/odoo/18/integrations/de_zkteco_attend/"><span>ZKTeco Biometric Attendance</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">workflow</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><p><a class="" href="/odoo/18/integrations/de_zkteco_attend/">← Back to Home</a></p>
+<header><h1>Workflow</h1></header>
+<p>This guide explains how attendance data moves from a ZKTeco biometric device into Odoo attendance records.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>The module uses a queue-based processing mechanism to ensure reliable attendance synchronization and prevent data loss.</p>
+<p>Attendance records are first fetched from biometric devices, validated, stored in an intermediate table, and then processed into standard Odoo attendance records.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attendance-synchronization-flow">Attendance Synchronization Flow<a href="#attendance-synchronization-flow" class="hash-link" aria-label="Direct link to Attendance Synchronization Flow" title="Direct link to Attendance Synchronization Flow" translate="no">​</a></h2>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">ZKTeco Device</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Fetch Attendance</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Attendance Records</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Queue Creation</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Queue Processing</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Odoo Attendance</span><br></div></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1-fetch-attendance">Step 1: Fetch Attendance<a href="#step-1-fetch-attendance" class="hash-link" aria-label="Direct link to Step 1: Fetch Attendance" title="Direct link to Step 1: Fetch Attendance" translate="no">​</a></h2>
+<p>The system retrieves attendance punches directly from configured biometric devices.</p>
+<p>During synchronization:</p>
+<ol>
+<li class="">Device connectivity is verified.</li>
+<li class="">Attendance logs are downloaded.</li>
+<li class="">Employee mappings are validated.</li>
+<li class="">Attendance records are created.</li>
+</ol>
+<p>The fetched records are stored in the intermediate attendance table before processing.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-create-attendance-records">Step 2: Create Attendance Records<a href="#step-2-create-attendance-records" class="hash-link" aria-label="Direct link to Step 2: Create Attendance Records" title="Direct link to Step 2: Create Attendance Records" translate="no">​</a></h2>
+<p>Each punch received from the biometric device is stored as a separate attendance entry.</p>
+<p>Example:</p>
+<table><thead><tr><th>User ID</th><th>Date &amp; Time</th><th>Attendance Mode</th></tr></thead><tbody><tr><td>1</td><td>08:00</td><td>Check In</td></tr><tr><td>1</td><td>12:00</td><td>Check Out</td></tr><tr><td>1</td><td>13:00</td><td>Check In</td></tr><tr><td>1</td><td>17:00</td><td>Check Out</td></tr></tbody></table>
+<p>At this stage, records are waiting for processing.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3-queue-creation">Step 3: Queue Creation<a href="#step-3-queue-creation" class="hash-link" aria-label="Direct link to Step 3: Queue Creation" title="Direct link to Step 3: Queue Creation" translate="no">​</a></h2>
+<p>After attendance records are created, the system automatically generates a processing queue.</p>
+<p>The queue serves as a processing batch and keeps attendance synchronization organized and traceable.</p>
+<p>Each synchronization operation creates:</p>
+<ul>
+<li class="">Queue Record</li>
+<li class="">Queue Lines</li>
+<li class="">Processing Logs</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-4-queue-line-generation">Step 4: Queue Line Generation<a href="#step-4-queue-line-generation" class="hash-link" aria-label="Direct link to Step 4: Queue Line Generation" title="Direct link to Step 4: Queue Line Generation" translate="no">​</a></h2>
+<p>Each attendance record generates a corresponding queue line.</p>
+<p>Queue lines store processing information such as:</p>
+<ul>
+<li class="">Employee</li>
+<li class="">User ID</li>
+<li class="">Attendance Date</li>
+<li class="">Processing Message</li>
+<li class="">Processing Status</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="queue-line-states">Queue Line States<a href="#queue-line-states" class="hash-link" aria-label="Direct link to Queue Line States" title="Direct link to Queue Line States" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="success">Success<a href="#success" class="hash-link" aria-label="Direct link to Success" title="Direct link to Success" translate="no">​</a></h3>
+<p>Indicates that the attendance record passed validation and is ready for processing.</p>
+<p>Examples:</p>
+<ul>
+<li class="">Employee mapping found</li>
+<li class="">Attendance data valid</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="failed">Failed<a href="#failed" class="hash-link" aria-label="Direct link to Failed" title="Direct link to Failed" translate="no">​</a></h3>
+<p>Indicates that the attendance record could not be processed.</p>
+<p>Examples:</p>
+<ul>
+<li class="">Employee mapping not found</li>
+<li class="">Invalid attendance data</li>
+<li class="">Missing employee</li>
+</ul>
+<p>Failed queue lines are skipped during attendance processing.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-5-attendance-processing">Step 5: Attendance Processing<a href="#step-5-attendance-processing" class="hash-link" aria-label="Direct link to Step 5: Attendance Processing" title="Direct link to Step 5: Attendance Processing" translate="no">​</a></h2>
+<p>A scheduled action processes queue records automatically.</p>
+<p>Only queue lines with the following status are processed:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">Success</span><br></div></code></pre></div></div>
+<p>Failed queue lines are ignored until corrected.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attendance-conversion-logic">Attendance Conversion Logic<a href="#attendance-conversion-logic" class="hash-link" aria-label="Direct link to Attendance Conversion Logic" title="Direct link to Attendance Conversion Logic" translate="no">​</a></h2>
+<p>ZKTeco devices store punches individually.</p>
+<p>Example:</p>
+<table><thead><tr><th>Time</th><th>Mode</th></tr></thead><tbody><tr><td>08:00</td><td>Check In</td></tr><tr><td>12:00</td><td>Check Out</td></tr><tr><td>13:00</td><td>Check In</td></tr><tr><td>17:00</td><td>Check Out</td></tr></tbody></table>
+<p>Odoo requires paired attendance records.</p>
+<p>Therefore, the system converts them into:</p>
+<table><thead><tr><th>Check In</th><th>Check Out</th></tr></thead><tbody><tr><td>08:00</td><td>12:00</td></tr><tr><td>13:00</td><td>17:00</td></tr></tbody></table>
+<p>Result:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">4 Punches → 2 Attendance Records</span><br></div></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attendance-pairing-logic">Attendance Pairing Logic<a href="#attendance-pairing-logic" class="hash-link" aria-label="Direct link to Attendance Pairing Logic" title="Direct link to Attendance Pairing Logic" translate="no">​</a></h2>
+<p>Attendance records are grouped by employee and sorted chronologically.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">Attendance Date ASC</span><br></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="check-in">Check In<a href="#check-in" class="hash-link" aria-label="Direct link to Check In" title="Direct link to Check In" translate="no">​</a></h3>
+<p>The system stores the check-in punch temporarily.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="check-out">Check Out<a href="#check-out" class="hash-link" aria-label="Direct link to Check Out" title="Direct link to Check Out" translate="no">​</a></h3>
+<p>The next check-out punch is paired with the previous check-in punch.</p>
+<p>A new attendance record is then created in Odoo.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attendance-states">Attendance States<a href="#attendance-states" class="hash-link" aria-label="Direct link to Attendance States" title="Direct link to Attendance States" translate="no">​</a></h2>
+<p>Each attendance record can have one of the following states.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="draft">Draft<a href="#draft" class="hash-link" aria-label="Direct link to Draft" title="Direct link to Draft" translate="no">​</a></h3>
+<p>The attendance has been fetched but has not yet been processed.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validated">Validated<a href="#validated" class="hash-link" aria-label="Direct link to Validated" title="Direct link to Validated" translate="no">​</a></h3>
+<p>The attendance was successfully converted and inserted into Odoo attendance records.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="conflict">Conflict<a href="#conflict" class="hash-link" aria-label="Direct link to Conflict" title="Direct link to Conflict" translate="no">​</a></h3>
+<p>The attendance could not be processed due to a validation issue.</p>
+<p>Common reasons include:</p>
+<ul>
+<li class="">Invalid attendance sequence</li>
+<li class="">Duplicate attendance</li>
+<li class="">Validation errors</li>
+<li class="">Missing attendance pair</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conflict-management">Conflict Management<a href="#conflict-management" class="hash-link" aria-label="Direct link to Conflict Management" title="Direct link to Conflict Management" translate="no">​</a></h2>
+<p>When a conflict occurs:</p>
+<ol>
+<li class="">The attendance remains available for review.</li>
+<li class="">The state changes to <strong>Conflict</strong>.</li>
+<li class="">The reason is recorded for troubleshooting.</li>
+<li class="">Other attendance records continue processing normally.</li>
+</ol>
+<p>This prevents a single issue from blocking the entire synchronization process.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="queue-completion">Queue Completion<a href="#queue-completion" class="hash-link" aria-label="Direct link to Queue Completion" title="Direct link to Queue Completion" translate="no">​</a></h2>
+<p>A queue is automatically updated after processing.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="done">Done<a href="#done" class="hash-link" aria-label="Direct link to Done" title="Direct link to Done" translate="no">​</a></h3>
+<p>The queue is marked as Done when all attendance records have been processed.</p>
+<p>Attendance records may be:</p>
+<ul>
+<li class="">Validated</li>
+<li class="">Conflict</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="failed-1">Failed<a href="#failed-1" class="hash-link" aria-label="Direct link to Failed" title="Direct link to Failed" translate="no">​</a></h3>
+<p>The queue is marked as Failed if an unexpected system error occurs during processing.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="automatic-processing">Automatic Processing<a href="#automatic-processing" class="hash-link" aria-label="Direct link to Automatic Processing" title="Direct link to Automatic Processing" translate="no">​</a></h2>
+<p>The module includes scheduled actions that automate attendance synchronization.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="attendance-fetch-cron">Attendance Fetch Cron<a href="#attendance-fetch-cron" class="hash-link" aria-label="Direct link to Attendance Fetch Cron" title="Direct link to Attendance Fetch Cron" translate="no">​</a></h3>
+<p>Responsible for:</p>
+<ul>
+<li class="">Connecting to devices</li>
+<li class="">Downloading attendance logs</li>
+<li class="">Creating attendance records</li>
+<li class="">Creating processing queues</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="queue-processing-cron">Queue Processing Cron<a href="#queue-processing-cron" class="hash-link" aria-label="Direct link to Queue Processing Cron" title="Direct link to Queue Processing Cron" translate="no">​</a></h3>
+<p>Responsible for:</p>
+<ul>
+<li class="">Processing queue records</li>
+<li class="">Pairing attendance punches</li>
+<li class="">Creating Odoo attendance records</li>
+<li class="">Updating attendance states</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="error-recovery">Error Recovery<a href="#error-recovery" class="hash-link" aria-label="Direct link to Error Recovery" title="Direct link to Error Recovery" translate="no">​</a></h2>
+<p>The queue-based architecture provides safe error handling.</p>
+<p>Benefits include:</p>
+<ul>
+<li class="">No attendance data loss</li>
+<li class="">Detailed processing logs</li>
+<li class="">Retry capability</li>
+<li class="">Conflict tracking</li>
+<li class="">Reliable synchronization</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="workflow-summary">Workflow Summary<a href="#workflow-summary" class="hash-link" aria-label="Direct link to Workflow Summary" title="Direct link to Workflow Summary" translate="no">​</a></h2>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">Device Attendance</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Attendance Fetch</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Attendance Records</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Queue Creation</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Queue Processing</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Attendance Validation</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        │</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        ▼</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">Odoo Attendance</span><br></div></code></pre></div></div>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="navigation">Navigation<a href="#navigation" class="hash-link" aria-label="Direct link to Navigation" title="Direct link to Navigation" translate="no">​</a></h3>
+<p>⬅️ Previous: <a class="" href="/odoo/18/integrations/de_zkteco_attend/configuration/">Configuration</a></p>
+<p>➡️ Next: <a class="" href="/odoo/18/integrations/de_zkteco_attend/architecture/">Architecture</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-09-01T15:46:32.000Z" itemprop="dateModified">Sep 1, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/odoo/18/integrations/de_zkteco_attend/configuration/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Configuration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/odoo/18/integrations/de_zkteco_attend/architecture/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">architecture</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#attendance-synchronization-flow" class="table-of-contents__link toc-highlight">Attendance Synchronization Flow</a></li><li><a href="#step-1-fetch-attendance" class="table-of-contents__link toc-highlight">Step 1: Fetch Attendance</a></li><li><a href="#step-2-create-attendance-records" class="table-of-contents__link toc-highlight">Step 2: Create Attendance Records</a></li><li><a href="#step-3-queue-creation" class="table-of-contents__link toc-highlight">Step 3: Queue Creation</a></li><li><a href="#step-4-queue-line-generation" class="table-of-contents__link toc-highlight">Step 4: Queue Line Generation</a></li><li><a href="#queue-line-states" class="table-of-contents__link toc-highlight">Queue Line States</a><ul><li><a href="#success" class="table-of-contents__link toc-highlight">Success</a></li><li><a href="#failed" class="table-of-contents__link toc-highlight">Failed</a></li></ul></li><li><a href="#step-5-attendance-processing" class="table-of-contents__link toc-highlight">Step 5: Attendance Processing</a></li><li><a href="#attendance-conversion-logic" class="table-of-contents__link toc-highlight">Attendance Conversion Logic</a></li><li><a href="#attendance-pairing-logic" class="table-of-contents__link toc-highlight">Attendance Pairing Logic</a><ul><li><a href="#check-in" class="table-of-contents__link toc-highlight">Check In</a></li><li><a href="#check-out" class="table-of-contents__link toc-highlight">Check Out</a></li></ul></li><li><a href="#attendance-states" class="table-of-contents__link toc-highlight">Attendance States</a><ul><li><a href="#draft" class="table-of-contents__link toc-highlight">Draft</a></li><li><a href="#validated" class="table-of-contents__link toc-highlight">Validated</a></li><li><a href="#conflict" class="table-of-contents__link toc-highlight">Conflict</a></li></ul></li><li><a href="#conflict-management" class="table-of-contents__link toc-highlight">Conflict Management</a></li><li><a href="#queue-completion" class="table-of-contents__link toc-highlight">Queue Completion</a><ul><li><a href="#done" class="table-of-contents__link toc-highlight">Done</a></li><li><a href="#failed-1" class="table-of-contents__link toc-highlight">Failed</a></li></ul></li><li><a href="#automatic-processing" class="table-of-contents__link toc-highlight">Automatic Processing</a><ul><li><a href="#attendance-fetch-cron" class="table-of-contents__link toc-highlight">Attendance Fetch Cron</a></li><li><a href="#queue-processing-cron" class="table-of-contents__link toc-highlight">Queue Processing Cron</a></li></ul></li><li><a href="#error-recovery" class="table-of-contents__link toc-highlight">Error Recovery</a></li><li><a href="#workflow-summary" class="table-of-contents__link toc-highlight">Workflow Summary</a><ul><li><a href="#navigation" class="table-of-contents__link toc-highlight">Navigation</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/odoo/19/">Odoo 19</a></li><li class="footer__item"><a class="footer__link-item" href="/odoo/18/">Odoo 18</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Dynexcel</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dynexcel.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Dynexcel.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdynexcel_docs||=[]).push([[2634],{192(e,t,n){n.r(t),n.d(t,{default:()=>l});n(6540);var o=n(3605),c=n(612),d=n(4848);function l(){return(0,d.jsx)(o.A,{title:"Dynexcel Documentation",children:(0,d.jsx)(c.rd,{to:"/odoo/19/"})})}}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdynexcel_docs||=[]).push([[3674],{1818(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"odoo18"}')}}]);
