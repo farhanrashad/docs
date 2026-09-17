@@ -1,128 +1,123 @@
 ---
 id: index
-title: TCS Connector
-sidebar_label: TCS Connector
+title: TCS Delivery
+sidebar_label: TCS Delivery
 sidebar_position: 40
 ---
 
-# TCS Connector
+# TCS Delivery
 
-`dx_tcs_connector` provides the Odoo 18 TCS delivery integration foundation
-and operational workflow. It covers authentication, delivery-method
-configuration, master data, booking, tracking, labels, shipper advice, and
-COD settlement/reconciliation records.
+Use this guide to configure TCS delivery methods, prepare shipments, book
+consignments, track deliveries, print labels, handle shipper advice, and
+review COD settlement information.
 
-## Source details
+## Before you begin
 
-| Item | Value |
-| --- | --- |
-| Technical module | `dx_tcs_connector` |
-| Version reviewed | `18.0.1.2.89` |
-| Source folder | `DEApps/dx_tcs_connector` |
-| Category | Inventory / Delivery |
-| License | LGPL-3 |
+Ask your administrator to install PakShip and the TCS delivery integration.
+Obtain the TCS account credentials, customer number, shipper contact, and
+cost-center information needed for your company and pickup location.
 
-## Dependencies and installation
+## Configure a TCS delivery method
 
-The module depends on `dx_pakship`, standard Odoo stock, delivery, sales,
-accounting, and mail components.
+1. Open **Inventory → Configuration → Delivery Methods**.
+2. Create or open a delivery method and select **TCS Courier**.
+3. Select the company and choose **Development / Sandbox** or **Production**.
+4. Select a TCS shipper contact.
+5. Choose the authentication method provided by TCS:
+   - **Static Bearer Token**, or
+   - **Generate Bearer Token** with client credentials.
+6. Enter the username and password required for the TCS account.
+7. Select **Test Connection** before synchronizing data.
 
-1. Install or upgrade `dx_pakship`.
-2. Install `dx_tcs_connector`.
-3. Create a delivery method under **Inventory → Configuration → Delivery
-   Methods**.
-4. Select **TCS Courier**, the correct company, and the correct sandbox or
-   production environment.
-5. Configure a dedicated TCS shipper contact and credentials.
-6. Test the connection before synchronizing master data.
+Keep sandbox and production credentials separate. When changing the environment,
+synchronize the master data for the newly selected environment before booking.
 
-## Authentication and environment
+## Synchronize setup information
 
-Authentication is stored per TCS delivery method. The connector supports:
+From the TCS delivery method, run:
 
-- **Static Bearer Token**, using the configured bearer token;
-- **Generate Bearer Token**, using the configured client ID and client secret;
-- username/password authentication for the ECOM access token; and
-- per-delivery-method cached tokens and expiry values.
+1. **Sync Master Data** for cities and other available location information.
+2. **Import Cost Centers** for the pickup locations allowed by the account.
+3. **Sync Delivery Statuses** so tracking updates can be understood in Odoo.
 
-The source guide identifies sandbox and production root hosts, then derives
-the `/ecom` and `/tracking` operation paths. Tokens are masked in the UI and
-redacted from API logs. When switching environments, synchronize the selected
-environment's master data before booking.
+The shipper city must match the origin registered for the selected cost center.
+If a required cost center is missing, ask the TCS account administrator to make
+it available and import the list again.
 
-## Master data setup
+## Prepare and book a delivery
 
-From the TCS delivery method, run **Sync Master Data**, **Import Cost Centers**,
-and **Sync Delivery Statuses**. Cost centers are required for booking, and the
-shipper/origin city must match the cost-center origin. City, route, country,
-status, cost-center, company, and environment records are kept within the
-connector's source-supported boundaries.
+Before booking, confirm:
 
-## Booking workflow
+- customer name and delivery address;
+- delivery city available in the active TCS list;
+- customer mobile in the required Pakistan format;
+- shipper contact and shipper mobile;
+- cost center and account information;
+- product weight and description; and
+- COD amount.
 
-Before booking, confirm the delivery contact, TCS city, Pakistan-format mobile,
-shipper contact, shipper city, cost center, account code, weight, and COD.
-COD is based on the remaining amount due on the related sale order: fully paid
-orders produce zero COD, while partially paid orders use the remaining balance.
+To book one delivery:
 
-For a single delivery, use the TCS booking action or **Send to Shipper**. The
-connector queues the request, stores the returned consignment number as the
-tracking reference, and retains a failure reason when the provider rejects the
-booking. Automatic booking after validation is asynchronous.
+1. Open the completed delivery order.
+2. Correct any issue shown on the delivery.
+3. Select the TCS booking action or **Send to Shipper**.
+4. Wait for the background queue to process the request.
+5. Confirm that the TCS consignment number is saved as the tracking reference.
 
-Bulk booking creates internal Odoo batches; each delivery is still sent as an
-individual TCS booking request. Failed lines can be retried without stopping
-the remaining lines in a batch.
+When automatic booking is enabled, Odoo queues the booking after delivery
+validation. The browser does not need to remain open while the queue works.
+
+## Bulk booking
+
+Bulk booking creates internal batches to organize work. Each delivery is still
+sent separately to TCS. Review the batch for pending, booked, failed, and
+skipped lines. Use **Retry Failed** after correcting the relevant delivery.
 
 ## Tracking, labels, and shipper advice
 
-Booked consignments can refresh tracking manually or through the scheduled
-polling flow. A TCS label PDF is downloaded and stored after a consignment
-number exists; subsequent reprints use the stored attachment. Batch label PDFs
-contain successful booked labels only.
+- Use **Refresh Tracking** on a booked consignment for an immediate update.
+- Enable tracking polling when regular background updates are required.
+- Print a label after the TCS consignment number is available.
+- Use reprint when a label has already been downloaded and stored.
+- Use **Shipper Advice** for TCS requests such as address or phone corrections.
+- Enter the requested correction and submit the advice, then confirm it is
+  marked resolved.
 
-Shipper Advice is used for TCS tickets such as delivery address or phone
-corrections. Pending tickets can be synchronized, edited with the returned TCS
-action/detail values, submitted, and marked resolved in Odoo.
+## COD settlement
 
-## COD reconciliation and audit trail
+1. Configure the accounting accounts and journals with your administrator.
+2. Open **Inventory → Operations → TCS → COD Reconciliation**.
+3. Select the TCS delivery method and date range.
+4. Import the settlement information.
+5. Review rows matched to local consignments by consignment number.
+6. Investigate short-paid, over-deducted, orphan, or returned rows.
+7. Post the accounting entries only after the amounts are confirmed.
 
-Payment Detail rows are imported over the configured date range and matched to
-local consignments by CN. Reconciliation classifies matched, short-paid,
-over-deducted, orphan, and returned rows according to the source workflow.
-Configured accounting accounts and journals can be used for COD clearing,
-courier expense, input tax, withholding tax, and settlement entries.
+Booking COD is based on the amount still due when the sale is booked. A fully
+paid order has zero COD; a partially paid order uses only the remaining amount.
 
-Each consignment can retain multiple API logs. Review the request timestamp,
-operation, endpoint, redacted payload, response, state, error, and trace ID
-when diagnosing a failed booking or retry.
+## Common problems
 
-## Important limitations
-
-- The connector uses the API's `pieces` booking value; a separate user-entered
-  flyer field is not implemented.
-- Internal bulk batches do not imply that TCS receives one multi-delivery HTTP
-  request.
-- Route availability depends on the selected TCS endpoint and account.
-- Account-specific product access, cost-center permissions, and production
-  enablement must be confirmed with TCS.
-- No TCS-specific screenshot or verified YouTube video is present in the
-  reviewed module source, so none is fabricated here.
-
-## Troubleshooting
-
-| Symptom | Check |
+| Message or symptom | What to check |
 | --- | --- |
-| Origin does not match cost center | Match the shipper city to the selected cost-center origin. |
-| Account field is required | Import or configure a valid 3–12 character TCS account value. |
-| Mobile validation fails | Use exactly `03XXXXXXXXX` with 11 digits. |
-| City not found | Synchronize the correct environment and select an active TCS city. |
-| No consignment number | Review the API Log request, response, and TCS trace ID. |
-| Invalid weight | Ensure the delivery weight is a valid numeric decimal. |
+| Origin does not match cost center | Match the shipper city with the cost-center pickup city. |
+| Account field is required | Confirm the TCS account and cost center with the account administrator. |
+| Mobile validation fails | Use exactly 11 digits in the `03XXXXXXXXX` format. |
+| City not found | Synchronize the active environment and select an available city. |
+| No consignment number | Review the delivery status and ask an administrator to check the booking log. |
+| Invalid weight | Enter a valid numeric delivery weight. |
 
-## Detailed source guide
+## Important behavior
 
-The source repository contains the complete workflow and API-boundary guide at
-`DEApps/docs/TCS_CONNECTOR_WORKFLOW.md`, including the supplied TCS manuals and
-Postman collection references. Those provider documents remain the contract
-source for account-specific behavior.
+- **Pieces/Flyers** means the number of packages in one shipment. It is not a
+  separate booking type.
+- Bulk batches organize Odoo work; they do not mean that all deliveries are
+  sent in one request.
+- TCS account permissions, enabled services, cost centers, and production
+  access must be confirmed with TCS.
+- No TCS-specific screenshot or verified YouTube video was available in the
+  reviewed materials, so this guide does not show an unverified image or link.
+
+## Related guide
+
+- [PakShip](../dx_pakship/)

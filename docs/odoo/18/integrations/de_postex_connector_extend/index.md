@@ -1,82 +1,63 @@
 ---
 id: index
-title: PostEx Shipment Item Enhancements
-sidebar_label: PostEx Shipment Item Enhancements
+title: PostEx Shipment Items
+sidebar_label: PostEx Shipment Items
 sidebar_position: 30
 ---
 
-# PostEx Shipment Item Enhancements
+# PostEx Shipment Items
 
-`de_postex_connector_extend` is an optional Odoo 18 companion addon for
-PostEx-specific information in the PakShip Shipment Items workspace. It adds
-delivery city and mobile columns, a quick delivery-contact correction action,
-and PostEx-specific consignment and validation filters.
+This optional guide explains the extra PostEx information available in the
+PakShip Shipment Items screen: delivery city, mobile number, tracking details,
+contact correction, and courier-specific filters.
 
-## Source details
+## When to use this page
 
-| Item | Value |
-| --- | --- |
-| Technical module | `de_postex_connector_extend` |
-| Version reviewed | `18.0.1.2.1` |
-| Source folder | `DEApps/de_postex_connector_extend` |
-| Category | Inventory / Delivery |
-| License | Odoo Proprietary License v1.0 (`OPL-1`) |
+Use these features when your team needs to correct customer delivery details
+before booking or quickly find PostEx items that still need a consignment or
+have a delivery issue.
 
-## Dependencies and installation
+## Shipment item workflow
 
-Install these modules first:
+1. Open **PakShip → Operations → Shipment Items**.
+2. Review the customer, city, mobile number, delivery method, tracking
+   reference, scheduled date, and status.
+3. Use **Open Items** to focus on unfinished items.
+4. Use **To Consignment**, **Consignment Done**, or **Validation Errors** to
+   focus on PostEx-specific work.
+5. Correct the city or mobile number when required.
+6. Select the relevant lines and choose **Actions → Validate Deliveries** when
+   the delivery is ready for Odoo validation.
 
-- `dx_pakship` for the shared shipment workspace and generic validation;
-- `dx_postex_connector` for PostEx delivery fields and booking state; and
-- Odoo `sale_stock` for sales-delivery relationships.
+The validation action processes each linked Odoo delivery once, even when more
+than one item from that delivery is selected. It does not book the PostEx
+shipment; booking is handled from the PostEx delivery workflow.
 
-Then install `de_postex_connector_extend`, restart Odoo, and refresh browser
-assets after the upgrade. Existing PostEx booking, tracking, cancellation,
-labels, payment status, and reconciliation-ready workflows remain in
-`dx_postex_connector`.
+## Correct a delivery contact
 
-## User workflow
+Use the correction action when the delivery city or mobile number is wrong:
 
-Open **PakShip → Operations → Shipment Items**. The companion addon adds
-PostEx-specific filters beneath the shared **Open Items** filter:
+1. Select the delivery item.
+2. Open the correction action.
+3. Choose the correct active city.
+4. Enter the customer's mobile number in the required format.
+5. Save the correction and review the delivery issue again.
 
-- **To Consignment**;
-- **Consignment Done**; and
-- **Validation Errors**.
-
-The list can show the PostEx delivery city, mobile number, delivery method,
-tracking reference, and the shared delivery issue indicator. Use the correction
-action to select an active PostEx city and update the delivery mobile number.
-Generic **Actions → Validate Deliveries** remains owned by `dx_pakship`; it
-groups selected item lines by native Odoo delivery and does not call the PostEx
-API.
-
-## Scope boundary
-
-This addon does not provide a second validation engine or a separate validation
-setting. Enable **Shipment Item Validation** in PakShip settings when the
-generic item-line validation action is required. PostEx credentials, booking,
-tracking, and API operations remain on the PostEx delivery method and
-`dx_postex_connector`.
+If the correction option is not visible, ask your administrator to confirm that
+the optional PostEx shipment-item features are enabled.
 
 ## Video
 
-The verified source video demonstrates the shared PakShip/PostEx workflow:
-
-[Watch “pakship postex” on YouTube](https://youtu.be/Z0aUzEzzzZg)
+[Watch the PakShip/PostEx demonstration on YouTube](https://youtu.be/Z0aUzEzzzZg)
 
 ## Screenshot
 
-The image below is copied unchanged from
-`DEApps/de_postex_connector_extend/static/description/img/`.
-
-### Shipment item details and correction affordance
-
 ![PakShip Shipment Items list with PostEx city, mobile, tracking, and issue fields](pathname:///odoo/18/de_postex_connector_extend/screenshots/02_postex-shipment-item-details.png)
 
-_PostEx-specific shipment item details layered onto the PakShip workspace._
+_Review PostEx delivery details and correct contact information from the
+Shipment Items workspace._
 
-## Related modules
+## Related guides
 
 - [PakShip](../dx_pakship/)
-- [PostEx Connector](../dx_postex_connector/)
+- [PostEx Delivery](../dx_postex_connector/)

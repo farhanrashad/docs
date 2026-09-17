@@ -7,28 +7,22 @@ sidebar_position: 20
 
 # Delivery and Courier Integrations
 
-This section documents Dynexcel Odoo 18 Community delivery and courier addons
-from the DEApps source repository. The pages distinguish the courier-neutral
-PakShip workspace from provider-specific connectors and optional companion
-addons.
+These guides explain everyday delivery work in Odoo: how to prepare delivery
+methods, book courier shipments, track consignments, print labels, correct
+customer details, and review COD settlement information.
 
-## Modules
+## Choose a guide
 
-| Module | Purpose |
+| Guide | Use it when you want to... |
 | --- | --- |
-| [PakShip](dx_pakship/) | Shared delivery operations, shipment views, dashboard analytics, validation, and COD-ready records. |
-| [PostEx Connector](dx_postex_connector/) | PostEx COD booking, tracking, labels, payment status, and operational master data. |
-| [PostEx Shipment Item Enhancements](de_postex_connector_extend/) | Optional PostEx columns, correction tools, and shipment-item filters. |
-| [TCS Connector](dx_tcs_connector/) | TCS authentication, delivery configuration, booking, tracking, labels, shipper advice, and reconciliation workflows. |
+| [PakShip](dx_pakship/) | Review deliveries, shipment items, dashboard KPIs, consignments, batches, and validation issues. |
+| [PostEx Delivery](dx_postex_connector/) | Configure PostEx and manage COD bookings, tracking, labels, and payment status. |
+| [PostEx Shipment Items](de_postex_connector_extend/) | Correct PostEx delivery contact details and filter shipment items by courier status. |
+| [TCS Delivery](dx_tcs_connector/) | Configure TCS, book deliveries, track consignments, print labels, and reconcile COD. |
 
-## Integration boundary
+## Before you begin
 
-Install `dx_pakship` as the shared delivery workspace when a connector depends
-on it. Provider credentials and API calls remain in the relevant connector.
-The PostEx companion addon is optional and adds only PostEx-specific shipment
-item enhancements.
-
-These pages describe the current source checkout on the Odoo 18 branch. API
-access, merchant permissions, sandbox credentials, production enablement, and
-carrier-specific account limits still require confirmation with the relevant
-provider.
+Ask your Odoo administrator to install the required delivery integration and
+give you access to Inventory, Delivery Methods, and the relevant courier
+operations. You also need an active merchant account and credentials from the
+courier before using booking or tracking features.

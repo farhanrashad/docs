@@ -1,149 +1,120 @@
 ---
 id: index
-title: PostEx Connector
-sidebar_label: PostEx Connector
+title: PostEx Delivery
+sidebar_label: PostEx Delivery
 sidebar_position: 20
 ---
 
-# PostEx Connector
+# PostEx Delivery
 
-`dx_postex_connector` is the Odoo 18 PostEx merchant COD connector built on
-the shared PakShip shipment layer. It provides delivery-method configuration,
-authentication, city and pickup-address synchronization, order types, booking,
-tracking, cancellation, labels, payment status, shipper advice, and
-reconciliation-ready records.
+Use this guide to configure PostEx delivery methods and manage COD shipments
+from Odoo: booking, tracking, cancellation, labels, payment status, and
+delivery follow-up.
 
-## Source details
+## Before you begin
 
-| Item | Value |
-| --- | --- |
-| Technical module | `dx_postex_connector` |
-| Version reviewed | `18.0.1.20.0` |
-| Source folder | `DEApps/dx_postex_connector` |
-| Category | Inventory / Delivery |
-| License | Odoo Proprietary License v1.0 (`OPL-1`) |
+Ask your administrator to install PakShip and the PostEx integration. Obtain
+the merchant token, the correct sandbox or production access, and a pickup
+address from PostEx.
 
-## Dependencies and installation
+## Configure PostEx
 
-The connector depends on `dx_pakship`, standard Odoo delivery and stock
-components, `account`, `mail`, and `sale_stock`.
+1. Open **Inventory → Configuration → Delivery Methods**.
+2. Create or open a delivery method.
+3. Select **PostEx** as the provider.
+4. Select the company and choose **Sandbox** or **Production**.
+5. Enter the PostEx API token supplied for that environment.
+6. Select **Test Connection**.
+7. Synchronize operational cities, pickup addresses, and order types.
+8. Select the pickup address used for shipments.
+9. Configure automatic booking, tracking polling, booking batches, label
+   printing, and COD matching according to your operating process.
 
-1. Install or upgrade `dx_pakship` first.
-2. Install `dx_postex_connector`.
-3. Create a delivery method under **Inventory → Configuration → Delivery
-   Methods**.
-4. Choose **PostEx** as the provider and assign the correct company.
-5. Configure the environment and token before synchronizing provider masters.
+Use a custom API address only when PostEx has supplied and approved it. Never
+share the merchant token in screenshots or support messages.
 
-`de_postex_connector_extend` is optional. It adds PostEx-specific columns,
-correction tools, and filters to PakShip Shipment Items; it does not own generic
-delivery validation.
+## Book a shipment
 
-## Configuration
-
-On the PostEx tab of the delivery method:
-
-- choose **Sandbox** or **Production**;
-- enter the merchant token in **PostEx API Token**;
-- use the default environment URL or a contract-approved custom API base URL;
-- test the connection;
-- synchronize operational cities, merchant pickup addresses, and order types;
-- select the pickup address;
-- configure automatic booking, tracking polling, booking batch size, labels,
-  and COD matching options as required.
-
-The connector sends the token in the `token` header. The current implementation
-uses the PostEx integration host and the internal routes documented in the
-DEApps `POSTEX_API_CONTRACT.md` guide. Account-specific merchant permissions
-and production access remain provider-side prerequisites.
-
-## Workflow
-
-1. Confirm the outgoing Odoo delivery has a PostEx delivery method and a valid
-   customer delivery address.
-2. Validate the delivery through standard Odoo validation or use the PakShip
+1. Open the outgoing delivery order.
+2. Confirm that the PostEx delivery method is selected.
+3. Check the customer name, address, city, mobile number, products, weight,
+   and COD amount.
+4. Validate the delivery using the normal Odoo process or the PakShip
    **Validate Deliveries** action.
-3. Queue **PostEx Booking**, or enable automatic booking after validation.
-4. Let the background queue process each delivery as an individual order.
-5. Review the saved tracking number and consignment record.
-6. Refresh tracking and payment status manually or through the configured cron.
-7. Print the airway bill/invoice or load sheet when the provider response is
-   available.
-8. Review failures on the delivery and retry after correcting the source data.
+5. Select **Queue PostEx Booking**, or use automatic booking if enabled.
+6. Open the consignment after processing and confirm the tracking number.
 
-The connector supports operational city and pickup-address synchronization,
-booking, tracking, cancellation, reverse/replacement order flows, labels,
-payment-status synchronization, and reconciliation-ready order rows. Automatic
-account-level settlement posting is not claimed without a current merchant
-settlement-detail contract.
+Each delivery is processed as an individual PostEx order. If a booking fails,
+correct the delivery information and retry it from the delivery or queue.
 
-## API operation boundary
+## Track, cancel, and print
 
-The implementation guide records these operations: operational cities,
-merchant addresses, order types, create order, tracking, bulk tracking,
-unbooked orders, order listing, load sheets, airway bills/invoices, shipper
-advice, cancellation, payment status, and order statuses. Merchant write
-operations such as address creation and shipper-advice updates require
-account-specific UAT before production claims are made.
+- Refresh tracking from the delivery or consignment when you need the latest
+  courier status.
+- Enable scheduled tracking when your team wants regular background updates.
+- Use the consignment actions to print the airway bill/invoice or generate a
+  load sheet.
+- Cancel a shipment only according to your PostEx operating process.
+- Use reverse or replacement order types when the shipment requires them.
+- Review payment status after delivery so the COD record stays up to date.
 
-## Security and troubleshooting
+## If booking fails
 
-Access is inherited through the PakShip and standard stock/account security
-model. Keep merchant tokens out of screenshots, source control, and logs.
+Check these items before retrying:
 
-For a failed booking, check the delivery contact, city, mobile number, COD,
-pickup address, environment, token, and API log. Confirm that the token belongs
-to the selected sandbox or production host. A successful local unit test does
-not prove that the merchant account is authorized to book in production.
+- the environment matches the token;
+- the token is active and has booking permission;
+- the pickup address and operational city are synchronized;
+- the customer's city and mobile number are valid;
+- the COD amount, weight, and delivery address are complete; and
+- the delivery is not already booked or cancelled.
+
+If the error continues, ask an administrator to review the delivery's API log
+and confirm the merchant account permissions with PostEx.
 
 ## Video
 
-The verified source video is a combined PakShip/PostEx demonstration:
-
-[Watch “pakship postex” on YouTube](https://youtu.be/Z0aUzEzzzZg)
+[Watch the PakShip/PostEx demonstration on YouTube](https://youtu.be/Z0aUzEzzzZg)
 
 ## Screenshots
-
-The images below are copied unchanged from
-`DEApps/dx_postex_connector/static/description/img/`.
 
 ### Delivery method configuration
 
 ![PostEx delivery method with provider and PakShip settings](pathname:///odoo/18/dx_postex_connector/screenshots/01_delivery-method-configuration.png)
 
-_PostEx delivery method configuration and shared PakShip options._
+_Configure the PostEx delivery method and booking options._
 
 ### API configuration
 
 ![PostEx environment, API base URL, token, and synchronization controls](pathname:///odoo/18/dx_postex_connector/screenshots/02_postex-api-configuration.png)
 
-_PostEx environment and API configuration._
+_Choose the environment, enter the approved credentials, and synchronize data._
 
 ### Operational cities
 
-![PostEx operational city master synchronized for a delivery method](pathname:///odoo/18/dx_postex_connector/screenshots/03_postex-cities.png)
+![PostEx operational city list](pathname:///odoo/18/dx_postex_connector/screenshots/03_postex-cities.png)
 
-_Synchronized PostEx operational cities._
+_Review the cities available for delivery addresses._
 
 ### Order types
 
 ![PostEx order types including normal, reverse, replacement, and overland](pathname:///odoo/18/dx_postex_connector/screenshots/04_postex-order-types.png)
 
-_Provider order types available for shipment workflows._
+_Choose the appropriate order type for the shipment._
 
-### PostEx shipment
+### Shipment
 
 ![Odoo delivery shipment with PostEx carrier and tracking information](pathname:///odoo/18/dx_postex_connector/screenshots/05_postex-shipment.png)
 
-_PostEx delivery record with shipment and tracking fields._
+_Review the PostEx carrier, shipment, and tracking information._
 
-### PostEx consignment
+### Consignment
 
 ![PostEx consignment form with tracking, labels, payment, and operational actions](pathname:///odoo/18/dx_postex_connector/screenshots/06_postex-consignment.png)
 
-_Consignment operations and financial summary._
+_Use the consignment page for tracking, labels, payment status, and follow-up._
 
-## Related modules
+## Related guides
 
 - [PakShip](../dx_pakship/)
-- [PostEx Shipment Item Enhancements](../de_postex_connector_extend/)
+- [PostEx Shipment Items](../de_postex_connector_extend/)
