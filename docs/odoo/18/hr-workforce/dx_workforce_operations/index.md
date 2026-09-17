@@ -1,3 +1,9 @@
+---
+id: index
+title: Workforce Operations
+sidebar_label: Workforce Operations
+---
+
 # Workforce Operations Suite
 
 ![Dynexcel](/img/dynexcel-logo-black.png)

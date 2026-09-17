@@ -39,6 +39,29 @@ The module landing page is `index.md`. The canonical module URL is:
 /odoo/<version>/<category>/<technical_module_name>/
 ```
 
+The URL is generated from the module directory path. Do not manually invent a
+different URL or use the display name in the path. A new module is published
+by creating this directory and its landing page:
+
+```text
+docs/odoo/<version>/<category>/<technical_module_name>/index.md
+```
+
+The landing page must start with frontmatter so that `index` is never used as
+the visible page or sidebar label:
+
+```yaml
+---
+id: index
+title: Module Display Name
+sidebar_label: Module Display Name
+---
+```
+
+The version sidebar is generated from these directories at build time. A
+category or module directory containing Markdown files is included
+automatically; no separate sidebar entry is required for each module.
+
 The left sidebar link text uses the module display name, while the URL uses the exact technical module name. Every module entry must be clickable and must open its module landing page. Sub-pages such as installation, configuration and workflow remain nested below that module.
 
 Add the module to the sidebar for its own Odoo version only. Use the category and nested module structure already defined for that version; do not add a module to another version without source evidence.

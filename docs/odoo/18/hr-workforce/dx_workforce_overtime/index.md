@@ -1,3 +1,9 @@
+---
+id: index
+title: Overtime
+sidebar_label: Overtime
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Overtime

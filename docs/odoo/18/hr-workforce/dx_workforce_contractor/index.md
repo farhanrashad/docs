@@ -1,3 +1,9 @@
+---
+id: index
+title: Contractor Labour
+sidebar_label: Contractor Labour
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Contractor Labour

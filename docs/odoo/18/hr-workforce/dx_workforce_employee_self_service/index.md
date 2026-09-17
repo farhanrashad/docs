@@ -1,3 +1,9 @@
+---
+id: index
+title: Employee Self Service
+sidebar_label: Employee Self Service
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Employee Self Service

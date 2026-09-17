@@ -1,7 +1,7 @@
 ---
 id: index
 title: HR & Workforce
-sidebar_label: HR & Workforce Home
+sidebar_label: HR & Workforce
 sidebar_position: 1
 ---
 

@@ -1,3 +1,9 @@
+---
+id: index
+title: Wage
+sidebar_label: Wage
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Wage

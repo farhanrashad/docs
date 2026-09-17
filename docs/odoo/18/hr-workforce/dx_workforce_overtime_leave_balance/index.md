@@ -1,3 +1,9 @@
+---
+id: index
+title: Overtime Leave Balance
+sidebar_label: Overtime Leave Balance
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Overtime Leave Balance

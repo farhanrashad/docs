@@ -1,3 +1,9 @@
+---
+id: index
+title: Final Settlement
+sidebar_label: Final Settlement
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Final Settlement

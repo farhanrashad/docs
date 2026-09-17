@@ -40,6 +40,17 @@ function docId(versionRoot, filePath) {
     .replace(/\.md$/, '');
 }
 
+function relativePath(versionRoot, filePath) {
+  return path.relative(versionRoot, filePath).replace(/\\/g, '/');
+}
+
+function isExcluded(versionRoot, filePath, excludedPaths) {
+  const currentPath = relativePath(versionRoot, filePath);
+  return excludedPaths.some((excludedPath) => (
+    currentPath === excludedPath || currentPath.startsWith(`${excludedPath}/`)
+  ));
+}
+
 function sidebarLabel(filePath, fallback) {
   const metadata = readDocMetadata(filePath);
   return metadata.sidebar_label || metadata.sidebarLabel || metadata.title || fallback;
@@ -63,18 +74,23 @@ function sortItems(items) {
     .map(({value}) => value);
 }
 
-function buildDirectoryItem(directoryPath, versionRoot) {
+function buildDirectoryItem(directoryPath, versionRoot, options = {}) {
   const directoryName = path.basename(directoryPath);
   const indexPath = path.join(directoryPath, 'index.md');
   const children = [];
+  const excludedPaths = options.excludedPaths || [];
 
   for (const entry of fs.readdirSync(directoryPath, {withFileTypes: true})) {
     const entryPath = path.join(directoryPath, entry.name);
 
     if (entry.isDirectory()) {
+      if (isExcluded(versionRoot, entryPath, excludedPaths)) {
+        continue;
+      }
+
       const childIndexPath = path.join(entryPath, 'index.md');
       children.push({
-        value: buildDirectoryItem(entryPath, versionRoot),
+        value: buildDirectoryItem(entryPath, versionRoot, options),
         sortLabel: entry.name,
         sidebarPosition: fs.existsSync(childIndexPath)
           ? sidebarPosition(childIndexPath)
@@ -126,9 +142,10 @@ function buildDirectoryItem(directoryPath, versionRoot) {
   };
 }
 
-function generateVersionSidebar(version) {
+function generateVersionSidebar(version, options = {}) {
   const versionRoot = path.join(__dirname, '..', 'docs', 'odoo', String(version));
   const rootIndex = path.join(versionRoot, 'index.md');
+  const excludedPaths = options.excludedPaths || [];
   const items = [
     {
       value: {
@@ -147,9 +164,13 @@ function generateVersionSidebar(version) {
     }
 
     const directoryPath = path.join(versionRoot, entry.name);
+    if (isExcluded(versionRoot, directoryPath, excludedPaths)) {
+      continue;
+    }
+
     const indexPath = path.join(directoryPath, 'index.md');
     items.push({
-      value: buildDirectoryItem(directoryPath, versionRoot),
+      value: buildDirectoryItem(directoryPath, versionRoot, options),
       sortLabel: entry.name,
       sidebarPosition: fs.existsSync(indexPath) ? sidebarPosition(indexPath) : Number.MAX_SAFE_INTEGER,
     });
@@ -158,4 +179,4 @@ function generateVersionSidebar(version) {
   return sortItems(items);
 }
 
-module.exports = {generateVersionSidebar};
+module.exports = {buildDirectoryItem, generateVersionSidebar};

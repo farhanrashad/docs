@@ -1,6 +1,8 @@
+const {generateVersionSidebar} = require('./generateVersionSidebar');
+
 module.exports = {
   odoo19Sidebar: [
-    'index',
+    ...generateVersionSidebar(19),
     {
       type: 'category',
       label: 'Modules',

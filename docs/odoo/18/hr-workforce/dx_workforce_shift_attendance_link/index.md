@@ -1,3 +1,9 @@
+---
+id: index
+title: Shift Attendance Link
+sidebar_label: Shift Attendance Link
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Shift Attendance Link

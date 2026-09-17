@@ -1,3 +1,9 @@
+---
+id: index
+title: Deductions
+sidebar_label: Deductions
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Deductions

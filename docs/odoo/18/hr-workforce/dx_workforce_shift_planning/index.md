@@ -1,3 +1,9 @@
+---
+id: index
+title: Shift Planning
+sidebar_label: Shift Planning
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Shift Planning

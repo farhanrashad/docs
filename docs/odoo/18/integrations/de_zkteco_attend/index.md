@@ -1,3 +1,9 @@
+---
+id: index
+title: ZKTeco Biometric Attendance Integration
+sidebar_label: ZKTeco Biometric Attendance
+---
+
 # ZKTeco Biometric Attendance Integration
 
 Integrate ZKTeco biometric devices with Odoo using a reliable queue-based attendance processing system.

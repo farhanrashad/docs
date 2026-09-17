@@ -1,3 +1,9 @@
+---
+id: index
+title: Leave Encashment
+sidebar_label: Leave Encashment
+---
+
 [HR & Workforce](../) | [Odoo 18 Home](/odoo/18/)
 
 # Leave Encashment
