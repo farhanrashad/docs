@@ -20,6 +20,10 @@ Choose a category from the left menu, then select a module. Every module entry o
     <h3>ZKTeco Biometric Attendance</h3>
     <p>Queue-based device attendance synchronization and configuration guidance.</p>
   </a>
+  <a className="module-card" href="/odoo/18/integrations/">
+    <h3>Delivery and Courier Integrations</h3>
+    <p>PakShip, PostEx, and TCS delivery operations, connector configuration, and workflow documentation.</p>
+  </a>
 </div>
 
 ## Documentation conventions
