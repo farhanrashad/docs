@@ -52,10 +52,9 @@ the optional PostEx shipment-item features are enabled.
 
 ## Screenshot
 
-![PakShip Shipment Items list with PostEx city, mobile, tracking, and issue fields](pathname:///odoo/18/de_postex_connector_extend/screenshots/02_postex-shipment-item-details.png)
+![PostEx Shipment Items list with highlighted city, mobile, tracking, and issue fields](pathname:///odoo/18/de_postex_connector_extend/screenshots/02_postex-shipment-item-details.png)
 
-_Review PostEx delivery details and correct contact information from the
-Shipment Items workspace._
+_Review PostEx delivery details on each shipment item._
 
 ## Related guides
 

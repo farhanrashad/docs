@@ -80,39 +80,39 @@ and confirm the merchant account permissions with PostEx.
 
 ### Delivery method configuration
 
-![PostEx delivery method with provider and PakShip settings](pathname:///odoo/18/dx_postex_connector/screenshots/01_delivery-method-configuration.png)
+![PostEx delivery method configuration with the highlighted booking options](pathname:///odoo/18/dx_postex_connector/screenshots/07_delivery-method-configuration-annotated.png)
 
-_Configure the PostEx delivery method and booking options._
+_Configure the delivery method and booking options._
 
 ### API configuration
 
-![PostEx environment, API base URL, token, and synchronization controls](pathname:///odoo/18/dx_postex_connector/screenshots/02_postex-api-configuration.png)
+![PostEx API configuration with the highlighted connection and synchronization controls](pathname:///odoo/18/dx_postex_connector/screenshots/08_postex-api-configuration-annotated.png)
 
-_Choose the environment, enter the approved credentials, and synchronize data._
+_Test the connection and synchronize PostEx master data._
 
 ### Operational cities
 
-![PostEx operational city list](pathname:///odoo/18/dx_postex_connector/screenshots/03_postex-cities.png)
+![PostEx city master with the highlighted synchronized city list](pathname:///odoo/18/dx_postex_connector/screenshots/09_postex-cities-annotated.png)
 
-_Review the cities available for delivery addresses._
+_Review the synchronized PostEx city master._
 
 ### Order types
 
-![PostEx order types including normal, reverse, replacement, and overland](pathname:///odoo/18/dx_postex_connector/screenshots/04_postex-order-types.png)
+![PostEx order types with the highlighted available shipment types](pathname:///odoo/18/dx_postex_connector/screenshots/10_postex-order-types-annotated.png)
 
-_Choose the appropriate order type for the shipment._
+_Review the order types available for PostEx shipments._
 
 ### Shipment
 
-![Odoo delivery shipment with PostEx carrier and tracking information](pathname:///odoo/18/dx_postex_connector/screenshots/05_postex-shipment.png)
+![PostEx shipment with the highlighted tracking reference and order type](pathname:///odoo/18/dx_postex_connector/screenshots/11_postex-shipment-annotated.png)
 
-_Review the PostEx carrier, shipment, and tracking information._
+_Review the shipment tracking reference and order type._
 
 ### Consignment
 
-![PostEx consignment form with tracking, labels, payment, and operational actions](pathname:///odoo/18/dx_postex_connector/screenshots/06_postex-consignment.png)
+![PostEx consignment with the highlighted tracking, labels, and COD controls](pathname:///odoo/18/dx_postex_connector/screenshots/12_postex-consignment-annotated.png)
 
-_Use the consignment page for tracking, labels, payment status, and follow-up._
+_Manage tracking, labels, and COD status from the consignment._
 
 ## Related guides
 

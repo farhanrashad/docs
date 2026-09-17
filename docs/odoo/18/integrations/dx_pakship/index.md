@@ -93,28 +93,27 @@ links back to the original delivery.
 
 ### Dashboard overview
 
-![PakShip dashboard with shipment KPIs, filters, and export actions](pathname:///odoo/18/dx_pakship/screenshots/01_dashboard-overview.png)
+![PakShip dashboard filters with the highlighted view controls](pathname:///odoo/18/dx_pakship/screenshots/05_dashboard-filters-annotated.png)
 
-_Use the dashboard to filter delivery activity and export results._
+_Set the dashboard filters, then apply the selected view._
 
 ### Shipment search and filters
 
-![PakShip shipment search view with operational delivery filters](pathname:///odoo/18/dx_pakship/screenshots/02_shipment-search-filters.png)
+![PakShip shipment search filters with the highlighted operational filters](pathname:///odoo/18/dx_pakship/screenshots/06_shipment-search-filters-annotated.png)
 
-_Use the shipment list to find deliveries that need attention._
+_Use operational filters to find the required shipments._
 
 ### Shipment item validation
 
-![PakShip shipment item list showing delivery validation information](pathname:///odoo/18/dx_pakship/screenshots/03_shipment-item-validation.png)
+![PakShip shipment item validation dialog with the highlighted delivery issue](pathname:///odoo/18/dx_pakship/screenshots/07_shipment-item-validation-annotated.png)
 
-_Review delivery issues before validating selected items._
+_Review the delivery issue before validating the selected item._
 
 ### Delivery contact correction
 
-![PakShip delivery contact correction dialog with city and mobile fields](pathname:///odoo/18/dx_pakship/screenshots/04_delivery-contact-correction.png)
+![PakShip delivery contact correction dialog with the highlighted city and mobile fields](pathname:///odoo/18/dx_pakship/screenshots/08_delivery-contact-correction-annotated.png)
 
-_Correct delivery contact information when the installed courier integration
-provides this option._
+_Correct the city and mobile details from the delivery dialog._
 
 ## Related guides
 
