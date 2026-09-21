@@ -265,5 +265,4 @@ summary. Actual results depend on the mapped user's permissions and database._
 
 ## Related documentation
 
-- [Odoo 19 Integrations](../)
-- [Odoo 19 Home](../../)
+- [Odoo 19 Home](../)
