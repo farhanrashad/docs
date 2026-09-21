@@ -15,8 +15,8 @@ configuration guidance.
 
 ## Available documentation
 
-- [ChatGPT / Codex MCP](dx_chatgpt_mcp/): connect Odoo with approved
-  MCP-compatible clients.
+- [Integrations](integrations/): connect Odoo with approved external services
+  and MCP-compatible clients.
 
 ## Version-specific documentation
 
