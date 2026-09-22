@@ -50,6 +50,17 @@ const config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'odoo20',
+        path: 'docs/odoo/20',
+        routeBasePath: 'odoo/20',
+        sidebarPath: require.resolve('./sidebars/odoo20.js'),
+        showLastUpdateTime: true,
+        showLastUpdateAuthor: false,
+      },
+    ],
+    [
       '@easyops-cn/docusaurus-search-local',
       {
         indexDocs: true,
@@ -82,6 +93,7 @@ const config = {
         {
           title: 'Documentation',
           items: [
+            {label: 'Odoo 20', to: '/odoo/20/'},
             {label: 'Odoo 19', to: '/odoo/19/'},
             {label: 'Odoo 18', to: '/odoo/18/'},
           ],

@@ -6,7 +6,7 @@ This document defines the standard workflow for adding or updating Dynexcel Odoo
 
 For each documentation request, provide:
 
-- Odoo version, for example `18` or `19`
+- Odoo version, for example `18`, `19` or `20`
 - Technical Odoo module name from the module manifest
 - Module source folder path
 - Documentation/reference file or folder path
@@ -21,7 +21,7 @@ Before writing documentation:
 1. Inspect the module manifest and confirm its technical name, display name, version and dependencies.
 2. Review the module README, models, views, security files, data files, wizards, scheduled actions and workflows relevant to the documented behavior.
 3. Read all supplied documentation/reference files completely. Preserve every substantive feature and add useful explanation where the source supports it.
-4. Keep Odoo 18 and Odoo 19 content separate. Do not assume that a feature, menu, model or screenshot exists in another version.
+4. Keep Odoo 18, Odoo 19 and Odoo 20 content separate. Do not assume that a feature, menu, model or screenshot exists in another version.
 5. Mark planned, optional, future or unavailable functionality clearly. Never document unsupported behavior as completed functionality.
 
 ## Versioned Location and URLs
@@ -31,6 +31,7 @@ Documentation is organized under the versioned portal paths:
 ```text
 docs/odoo/18/<category>/<technical_module_name>/
 docs/odoo/19/<category>/<technical_module_name>/
+docs/odoo/20/<category>/<technical_module_name>/
 ```
 
 The module landing page is `index.md`. The canonical module URL is:
@@ -125,7 +126,7 @@ Before reporting completion:
 
 - Every sidebar module link opens the correct versioned module page.
 - The URL contains the correct Odoo version, category and technical module name.
-- Odoo 18 and Odoo 19 sidebars are independent.
+- Odoo 18, Odoo 19 and Odoo 20 sidebars are independent.
 - Every source PNG is copied and displayed.
 - All Markdown links and image paths resolve.
 - The documentation site builds successfully with `npm run build`.

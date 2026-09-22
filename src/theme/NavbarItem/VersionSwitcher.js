@@ -3,15 +3,15 @@ import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-const versions = ['19', '18'];
+const versions = ['20', '19', '18'];
 
 function getVersion(pathname) {
-  const match = pathname.match(/^\/odoo\/(18|19)(?:\/|$)/);
+  const match = pathname.match(/^\/odoo\/(18|19|20)(?:\/|$)/);
   return match ? match[1] : '19';
 }
 
 function getTargetPath(pathname, targetVersion) {
-  const match = pathname.match(/^\/odoo\/(18|19)(\/.*)?$/);
+  const match = pathname.match(/^\/odoo\/(18|19|20)(\/.*)?$/);
   if (!match || !match[2] || match[2] === '/') {
     return `/odoo/${targetVersion}/`;
   }
@@ -49,6 +49,7 @@ function getTargetPath(pathname, targetVersion) {
       '/integrations/de_zkteco_attend/architecture/',
     ],
     '19': [],
+    '20': [],
   };
   const targetExists = knownPaths[targetVersion].includes(currentRest);
   if (targetExists) {
