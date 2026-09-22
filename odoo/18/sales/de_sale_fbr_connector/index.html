@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-odoo18 docs-version-current docs-doc-page docs-doc-id-sales/de_sale_fbr_connector/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Sales FBR Connector | Dynexcel Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.dynexcel.com/img/dynexcel-logo-black.png"><meta data-rh="true" name="twitter:image" content="https://docs.dynexcel.com/img/dynexcel-logo-black.png"><meta data-rh="true" property="og:url" content="https://docs.dynexcel.com/odoo/18/sales/de_sale_fbr_connector/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-odoo18-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-odoo18-current"><meta data-rh="true" property="og:title" content="Sales FBR Connector | Dynexcel Documentation"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/dynexcel-logo-black.png"><link data-rh="true" rel="canonical" href="https://docs.dynexcel.com/odoo/18/sales/de_sale_fbr_connector/"><link data-rh="true" rel="alternate" href="https://docs.dynexcel.com/odoo/18/sales/de_sale_fbr_connector/" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.dynexcel.com/odoo/18/sales/de_sale_fbr_connector/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sales FBR Connector","item":"https://docs.dynexcel.com/odoo/18/sales/de_sale_fbr_connector/"}]}</script><link rel="stylesheet" href="/assets/css/styles.77aa5478.css">
+<script src="/assets/js/runtime~main.1fe85bdb.js" defer="defer"></script>
+<script src="/assets/js/main.573be6bd.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/dynexcel-logo-black.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/dynexcel-logo-black.png" alt="Dynexcel" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/dynexcel-logo-black.png" alt="Dynexcel" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item version-switcher"><span class="version-switcher__label">Version</span><select aria-label="Select Odoo documentation version"><option value="20">Odoo <!-- -->20</option><option value="19">Odoo <!-- -->19</option><option value="18" selected="">Odoo <!-- -->18</option></select><a class="version-switcher__fallback" aria-label="Odoo 18" href="/odoo/18/?unavailable=de_sale_fbr_connector">Odoo <!-- -->18</a></div><a href="https://dynexcel.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Dynexcel.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/odoo/18/"><span class="linkLabel_WmDU">Odoo 18 Home</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/odoo/18/hr-workforce/"><span class="categoryLinkLabel_W154">HR &amp; Workforce</span></a><button aria-label="Expand sidebar category &#x27;HR &amp; Workforce&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/odoo/18/integrations/"><span class="categoryLinkLabel_W154">Delivery and Courier Integrations</span></a><button aria-label="Collapse sidebar category &#x27;Delivery and Courier Integrations&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/dx_pakship/"><span class="linkLabel_WmDU">PakShip</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/dx_postex_connector/"><span class="linkLabel_WmDU">PostEx Delivery</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/de_postex_connector_extend/"><span class="linkLabel_WmDU">PostEx Shipment Items</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/dx_tcs_connector/"><span class="linkLabel_WmDU">TCS Delivery</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/accounting/accounting/de_check_printing/"><span class="categoryLinkLabel_W154">Accounting</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/crm/sale/industries/de_school_admission/"><span class="categoryLinkLabel_W154">Crm</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/dynexcel/de_school_fees/"><span class="categoryLinkLabel_W154">Dynexcel</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/hidden/de_fbr_connector/"><span class="categoryLinkLabel_W154">Hidden</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/human-resources/dx_workforce_shift_management/"><span class="categoryLinkLabel_W154">Human Resources</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/inventory/de_stock_report/"><span class="categoryLinkLabel_W154">Inventory</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/point-of-sale/de_pos_fbr_connector/"><span class="categoryLinkLabel_W154">Point Of Sale</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/odoo/18/sales/de_sale_fbr_connector/"><span class="categoryLinkLabel_W154">Sales</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/odoo/18/sales/de_sale_fbr_connector/"><span class="linkLabel_WmDU">Sales FBR Connector</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/odoo/18/sales/industries/de_school_assignment/"><span class="categoryLinkLabel_W154">Industries</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/odoo/18/sales/point-of-sale/dx_pos_receipts/"><span class="categoryLinkLabel_W154">Point Of Sale</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/odoo/18/sales/school/industries/de_school/"><span class="categoryLinkLabel_W154">School</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/school/crm/industries/de_school_team/"><span class="categoryLinkLabel_W154">School</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/services/helpdesk/de_helpdesk/"><span class="categoryLinkLabel_W154">Services</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/integrations/de_zkteco_attend/"><span class="categoryLinkLabel_W154">Attendance Integrations</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Sales</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Sales FBR Connector</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Sales FBR Connector</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Technical module: <code>de_sale_fbr_connector</code></p>
+<p>This Odoo 18 manual is derived from the module manifest, source files, and the module App Store description. Verify the exact installed build before production use.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-backed-description">Source-backed description<a href="#source-backed-description" class="hash-link" aria-label="Direct link to Source-backed description" title="Direct link to Source-backed description" translate="no">​</a></h2>
+<p>Sales FBR Integration for Odoo 18</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="automated-reporting">Automated Reporting,<a href="#automated-reporting" class="hash-link" aria-label="Direct link to Automated Reporting," title="Direct link to Automated Reporting," translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fbr-e-invoicing">FBR E-Invoicing,<a href="#fbr-e-invoicing" class="hash-link" aria-label="Direct link to FBR E-Invoicing," title="Direct link to FBR E-Invoicing," translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="seamless-compliance">Seamless Compliance<a href="#seamless-compliance" class="hash-link" aria-label="Direct link to Seamless Compliance" title="Direct link to Seamless Compliance" translate="no">​</a></h3>
+<p>Integrate Odoo 18 Sales and Accounting with Pakistan&#x27;s FBR e-invoicing system. Automatic fee handling, PCT code tracking, retry logic, and complete audit trails — out of the box.
+Explore Features Get Support
+18.0 Odoo Version
+2 Dependencies
+OPL-1 License
+FBR Status - Live Sales Invoice INV/2024/001 Production Environment / Active
+SUBMITTED
+API Token Valid
+PCT Codes Mapped
+Submission OK
+Last Sync Just Now
+Retry Auto
+Fee Line Added
+INV/2024/001
+10:15
+Success
+INV/2024/002
+10:22
+INV/2024/003
+10:45
+Retrying
+S Sale Order</p>
+<blockquote>
+</blockquote>
+<p>I Invoice
+V Validate
+F FBR API</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-this-module">What is this module?<a href="#what-is-this-module" class="hash-link" aria-label="Direct link to What is this module?" title="Direct link to What is this module?" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fbr-e-invoicing-for-odoo-sales">FBR E-Invoicing for Odoo Sales<a href="#fbr-e-invoicing-for-odoo-sales" class="hash-link" aria-label="Direct link to FBR E-Invoicing for Odoo Sales" title="Direct link to FBR E-Invoicing for Odoo Sales" translate="no">​</a></h3>
+<p>This module integrates Odoo 18 Sales and Accounting with Pakistan&#x27;s Federal Board of Revenue (FBR) system. It automates invoice reporting from Sale Orders, handles FBR fees automatically, tracks PCT codes, and provides robust retry mechanisms with full audit trails.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-automated-submission">🧾 Automated Submission<a href="#-automated-submission" class="hash-link" aria-label="Direct link to 🧾 Automated Submission" title="Direct link to 🧾 Automated Submission" translate="no">​</a></h3>
+<p>Invoices are submitted to FBR automatically upon confirmation or via manual resend actions, ensuring timely compliance without extra steps.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-automatic-fee-handling">⚙️ Automatic Fee Handling<a href="#️-automatic-fee-handling" class="hash-link" aria-label="Direct link to ⚙️ Automatic Fee Handling" title="Direct link to ⚙️ Automatic Fee Handling" translate="no">​</a></h3>
+<p>FBR fee lines are inserted automatically into invoices based on configuration, eliminating manual calculation errors and saving time.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-retry--audit-logging">🔄 Retry &amp; Audit Logging<a href="#-retry--audit-logging" class="hash-link" aria-label="Direct link to 🔄 Retry &amp; Audit Logging" title="Direct link to 🔄 Retry &amp; Audit Logging" translate="no">​</a></h3>
+<p>Failed submissions trigger automatic retries via cron. Complete audit trails track payloads, responses, and status history for every transaction.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-capabilities">Key Capabilities<a href="#key-capabilities" class="hash-link" aria-label="Direct link to Key Capabilities" title="Direct link to Key Capabilities" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="everything-built-in">Everything Built In<a href="#everything-built-in" class="hash-link" aria-label="Direct link to Everything Built In" title="Direct link to Everything Built In" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fbr-fee-management">FBR Fee Management<a href="#fbr-fee-management" class="hash-link" aria-label="Direct link to FBR Fee Management" title="Direct link to FBR Fee Management" translate="no">​</a></h3>
+<p>Automatically add FBR fee product lines to invoices based on configurable rules and amounts.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pct-code-tracking">PCT Code Tracking<a href="#pct-code-tracking" class="hash-link" aria-label="Direct link to PCT Code Tracking" title="Direct link to PCT Code Tracking" translate="no">​</a></h3>
+<p>Map Pakistan Customs Tariff (PCT) codes directly to products for accurate tax classification in FBR payloads.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="smart-retry-logic">Smart Retry Logic<a href="#smart-retry-logic" class="hash-link" aria-label="Direct link to Smart Retry Logic" title="Direct link to Smart Retry Logic" translate="no">​</a></h3>
+<p>Failed API submissions are queued and retried automatically via scheduled actions or manually by managers.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="complete-audit-trail">Complete Audit Trail<a href="#complete-audit-trail" class="hash-link" aria-label="Direct link to Complete Audit Trail" title="Direct link to Complete Audit Trail" translate="no">​</a></h3>
+<p>Every submission attempt is logged with payload details, FBR responses, timestamps, and user information.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="manager-safe-access">Manager-Safe Access<a href="#manager-safe-access" class="hash-link" aria-label="Direct link to Manager-Safe Access" title="Direct link to Manager-Safe Access" translate="no">​</a></h3>
+<p>Restrict sensitive FBR configuration and detailed response logs to administrators while keeping sales users focused.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="manual-resend-actions">Manual Resend Actions<a href="#manual-resend-actions" class="hash-link" aria-label="Direct link to Manual Resend Actions" title="Direct link to Manual Resend Actions" translate="no">​</a></h3>
+<p>Trigger manual resubmission directly from invoice forms or list views when immediate action is required.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="flexible-configuration">Flexible Configuration<a href="#flexible-configuration" class="hash-link" aria-label="Direct link to Flexible Configuration" title="Direct link to Flexible Configuration" translate="no">​</a></h3>
+<p>Configure API URLs, tokens, environments, fee products, and auto-post settings directly from Sales settings.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="shared-base-connector">Shared Base Connector<a href="#shared-base-connector" class="hash-link" aria-label="Direct link to Shared Base Connector" title="Direct link to Shared Base Connector" translate="no">​</a></h3>
+<p>Built on the shared FBR Connector Base, ensuring compatibility with POS FBR Connector in the same database.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="company-level-settings">Company-Level Settings<a href="#company-level-settings" class="hash-link" aria-label="Direct link to Company-Level Settings" title="Direct link to Company-Level Settings" translate="no">​</a></h3>
+<p>All FBR configuration is applied at company level through sales-related settings views for multi-company support.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup-workflow-and-architecture">Setup Workflow and Architecture<a href="#setup-workflow-and-architecture" class="hash-link" aria-label="Direct link to Setup Workflow and Architecture" title="Direct link to Setup Workflow and Architecture" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="three-steps-to-go-live">Three Steps to Go Live<a href="#three-steps-to-go-live" class="hash-link" aria-label="Direct link to Three Steps to Go Live" title="Direct link to Three Steps to Go Live" translate="no">​</a></h3>
+<p>From installation to compliant invoicing — a clear, predictable pipeline every step of the way.
+01
+Install &amp; Configure Install de_sale_fbr_connector and its dependency de_fbr_connector . Enter API URL, Token, and Fee Product in Sales Settings.
+02
+Map Products Assign PCT codes to saleable products. Enable automatic FBR charge toggle if fees should be added to invoices.
+03
+Confirm &amp; Submit Create Sale Orders and confirm invoices. If auto-post is enabled, invoices submit to FBR automatically upon confirmation.
+Sale Order Created
+Invoice Generated
+Invoice Confirmed
+FBR API Submission
+Audit Log &amp; Status Update
+Watch It in Action</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="full-module-demo">Full Module Demo<a href="#full-module-demo" class="hash-link" aria-label="Direct link to Full Module Demo" title="Direct link to Full Module Demo" translate="no">​</a></h3>
+<p>See the complete flow — from configuring the FBR connector, mapping PCT codes, creating a sale order, confirming an invoice, and viewing the FBR submission status and audit logs.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-and-guidance">Documentation and Guidance<a href="#documentation-and-guidance" class="hash-link" aria-label="Direct link to Documentation and Guidance" title="Direct link to Documentation and Guidance" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="everything-you-need-to-get-started">Everything You Need to Get Started<a href="#everything-you-need-to-get-started" class="hash-link" aria-label="Direct link to Everything You Need to Get Started" title="Direct link to Everything You Need to Get Started" translate="no">​</a></h3>
+<p>From installing dependencies to configuring API tokens and managing retries — complete guides for every step.</p>
+<ul>
+<li class="">Overview</li>
+<li class="">Installation</li>
+<li class="">Configuration</li>
+<li class="">Workflow</li>
+<li class="">Retry &amp; Audit</li>
+<li class="">Security</li>
+<li class="">Automation</li>
+<li class="">FAQ
+The Sales FBR Connector integrates Odoo 18 Sales and Accounting with Pakistan&#x27;s Federal Board of Revenue (FBR) e-invoicing system.
+It enables automated invoice reporting from Sale Orders, automatic FBR fee handling, PCT code tracking for products, and enhanced audit capabilities with retry mechanisms.
+Key capabilities include:</li>
+<li class="">Automated invoice submission to FBR</li>
+<li class="">Automatic FBR fee line insertion</li>
+<li class="">Product-level PCT code mapping</li>
+<li class="">Submission retry and recovery mechanisms</li>
+<li class="">Complete audit logging for traceability</li>
+<li class="">Manager-safe access controls</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h3>
+<p>Ensure your environment meets these requirements:</p>
+<ul>
+<li class="">Odoo 18.0</li>
+<li class="">sale module installed</li>
+<li class="">account module installed</li>
+<li class="">de_fbr_connector (Base) module installed</li>
+<li class="">Network access to FBR API endpoints</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="installation-steps">Installation Steps<a href="#installation-steps" class="hash-link" aria-label="Direct link to Installation Steps" title="Direct link to Installation Steps" translate="no">​</a></h3>
+<ul>
+<li class="">Copy the de_sale_fbr_connector module to your Odoo addons path.</li>
+<li class="">Update the Apps List.</li>
+<li class="">Search for: Sales FBR Connector .</li>
+<li class="">Click Install .</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-installation">Post-Installation<a href="#post-installation" class="hash-link" aria-label="Direct link to Post-Installation" title="Direct link to Post-Installation" translate="no">​</a></h3>
+<p>Navigate to Sales Settings to configure the FBR integration parameters before going live.
+All FBR settings are managed within the Sales Settings area at company level.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-settings">Key Settings<a href="#key-settings" class="hash-link" aria-label="Direct link to Key Settings" title="Direct link to Key Settings" translate="no">​</a></h3>
+<p>Setting
+Description
+Master Toggle
+Enable/Disable FBR integration globally
+Environment
+Select Production or Sandbox mode
+API URL
+FBR endpoint address
+Auth Token
+API key or authentication token
+Terminal ID
+POS or terminal identifier
+Auto Charge
+Enable automatic FBR fee application
+Fee Product
+Product used for FBR fee lines
+Fee Amount
+Amount for automatic fee line
+Auto-Post
+Submit to FBR on invoice confirmation
+Retry Interval
+Time between failed submission retries</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="product-setup">Product Setup<a href="#product-setup" class="hash-link" aria-label="Direct link to Product Setup" title="Direct link to Product Setup" translate="no">​</a></h3>
+<p>Ensure all saleable products have valid PCT codes assigned for correct tax classification.
+The standard Sales workflow is enhanced with automatic FBR reporting steps.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sale-order-to-fbr-flow">Sale Order to FBR Flow<a href="#sale-order-to-fbr-flow" class="hash-link" aria-label="Direct link to Sale Order to FBR Flow" title="Direct link to Sale Order to FBR Flow" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="invoice-output">Invoice Output<a href="#invoice-output" class="hash-link" aria-label="Direct link to Invoice Output" title="Direct link to Invoice Output" translate="no">​</a></h3>
+<p>Upon successful submission, the invoice displays:</p>
+<ul>
+<li class="">FBR Invoice Number / Reference</li>
+<li class="">Submission status indicator</li>
+<li class="">Access to detailed audit logs
+Robust error handling ensures no transaction is lost and all activities are traceable.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="submission-retry">Submission Retry<a href="#submission-retry" class="hash-link" aria-label="Direct link to Submission Retry" title="Direct link to Submission Retry" translate="no">​</a></h3>
+<p>If an FBR submission fails due to network issues or API errors:</p>
+<ul>
+<li class="">Transaction is flagged as pending</li>
+<li class="">Automatic retry cron attempts resubmission</li>
+<li class="">Managers can trigger manual resend from invoice form or list</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="audit-trail">Audit Trail<a href="#audit-trail" class="hash-link" aria-label="Direct link to Audit Trail" title="Direct link to Audit Trail" translate="no">​</a></h3>
+<p>Comprehensive logs capture:</p>
+<ul>
+<li class="">Original payload sent to FBR</li>
+<li class="">API response messages and codes</li>
+<li class="">Timestamps and user references</li>
+<li class="">Success/Failure status history</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="security--access">Security &amp; Access<a href="#security--access" class="hash-link" aria-label="Direct link to Security &amp; Access" title="Direct link to Security &amp; Access" translate="no">​</a></h3>
+<p>Access controls ensure operational safety and data protection.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-roles">User Roles<a href="#user-roles" class="hash-link" aria-label="Direct link to User Roles" title="Direct link to User Roles" translate="no">​</a></h3>
+<p>Role
+Permissions
+Sales User
+View submission status relevant to their workflow
+Manager / Admin
+Access configuration, view detailed logs, manage retries, review payloads</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-protection">Data Protection<a href="#data-protection" class="hash-link" aria-label="Direct link to Data Protection" title="Direct link to Data Protection" translate="no">​</a></h3>
+<p>Sensitive API tokens and detailed FBR response payloads are restricted to authorized personnel only.
+Background processes keep the integration running smoothly without manual intervention.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scheduled-actions-crons">Scheduled Actions (Crons)<a href="#scheduled-actions-crons" class="hash-link" aria-label="Direct link to Scheduled Actions (Crons)" title="Direct link to Scheduled Actions (Crons)" translate="no">​</a></h3>
+<ul>
+<li class="">Retry Processing: Automatically resubmits failed transactions at configured intervals.</li>
+<li class="">Cleanup: Optional archiving of old audit logs.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="server-actions">Server Actions<a href="#server-actions" class="hash-link" aria-label="Direct link to Server Actions" title="Direct link to Server Actions" translate="no">​</a></h3>
+<p>Manual server actions are available for administrators to force retries or reset stuck states from invoice forms or list views.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="frequently-asked-questions">Frequently Asked Questions<a href="#frequently-asked-questions" class="hash-link" aria-label="Direct link to Frequently Asked Questions" title="Direct link to Frequently Asked Questions" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="is-this-compatible-with-odoo-community">Is this compatible with Odoo Community?<a href="#is-this-compatible-with-odoo-community" class="hash-link" aria-label="Direct link to Is this compatible with Odoo Community?" title="Direct link to Is this compatible with Odoo Community?" translate="no">​</a></h3>
+<p>Yes, the module is designed for both Odoo 18 Community and Enterprise editions.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="do-i-need-the-base-connector">Do I need the base connector?<a href="#do-i-need-the-base-connector" class="hash-link" aria-label="Direct link to Do I need the base connector?" title="Direct link to Do I need the base connector?" translate="no">​</a></h3>
+<p>Yes, de_fbr_connector is a mandatory dependency that provides shared PCT and API utilities.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-it-coexist-with-pos-fbr-connector">Can it coexist with POS FBR Connector?<a href="#can-it-coexist-with-pos-fbr-connector" class="hash-link" aria-label="Direct link to Can it coexist with POS FBR Connector?" title="Direct link to Can it coexist with POS FBR Connector?" translate="no">​</a></h3>
+<p>Yes, both modules share the same base and are designed to work together in the same database.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-happens-if-fbr-api-is-down">What happens if FBR API is down?<a href="#what-happens-if-fbr-api-is-down" class="hash-link" aria-label="Direct link to What happens if FBR API is down?" title="Direct link to What happens if FBR API is down?" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dependencies-and-prerequisites">Dependencies and prerequisites<a href="#dependencies-and-prerequisites" class="hash-link" aria-label="Direct link to Dependencies and prerequisites" title="Direct link to Dependencies and prerequisites" translate="no">​</a></h2>
+<ul>
+<li class="">Odoo version: <strong>18</strong></li>
+<li class="">Module version: <strong>18.0.2.1.0</strong></li>
+<li class="">Installable: <strong>Yes</strong></li>
+<li class="">Application module: <strong>Yes</strong></li>
+<li class="">Dependencies: <code>sale</code>, <code>de_fbr_connector</code></li>
+</ul>
+<p>Install the declared dependencies first, then install <code>Sales FBR Connector</code> from Odoo Apps. Do not assume a dependency is available in another Odoo version.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installation-and-configuration">Installation and configuration<a href="#installation-and-configuration" class="hash-link" aria-label="Direct link to Installation and configuration" title="Direct link to Installation and configuration" translate="no">​</a></h2>
+<ol>
+<li class="">Place the module in an addons path for the matching Odoo version.</li>
+<li class="">Update the Apps list and install the declared dependencies.</li>
+<li class="">Install <code>Sales FBR Connector</code> and follow the source-backed menus and workflows below.</li>
+<li class="">Test the primary workflow with a non-production record before enabling it for users.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-backed-workflows">Source-backed workflows<a href="#source-backed-workflows" class="hash-link" aria-label="Direct link to Source-backed workflows" title="Direct link to Source-backed workflows" translate="no">​</a></h2>
+<p>No explicit menu labels were detected by the static scan; inspect the module XML views and actions in the installed database.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-notes-and-access-review">Technical notes and access review<a href="#technical-notes-and-access-review" class="hash-link" aria-label="Direct link to Technical notes and access review" title="Direct link to Technical notes and access review" translate="no">​</a></h2>
+<ul>
+<li class="">Static source files: 13 Python, 7 XML, and 1 CSV.</li>
+<li class="">Detected model names: <code>move_id</code>, <code>sale.fbr.submission.log</code></li>
+<li class="">Review the module security files and installed user&#x27;s Odoo groups before granting access. Static documentation cannot certify live ACLs or record rules.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="screenshots">Screenshots<a href="#screenshots" class="hash-link" aria-label="Direct link to Screenshots" title="Direct link to Screenshots" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynexcel-icon">Dynexcel Icon<a href="#dynexcel-icon" class="hash-link" aria-label="Direct link to Dynexcel Icon" title="Direct link to Dynexcel Icon" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" src="/odoo/18/de_sale_fbr_connector/screenshots/dynexcel-icon.png" alt="Dynexcel Icon" class="img_ev3q"></p>
+<p><em>Dynexcel Icon from the module static description assets.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynexcel-logo">Dynexcel Logo<a href="#dynexcel-logo" class="hash-link" aria-label="Direct link to Dynexcel Logo" title="Direct link to Dynexcel Logo" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" src="/odoo/18/de_sale_fbr_connector/screenshots/dynexcel-logo.png" alt="Dynexcel Logo" class="img_ev3q"></p>
+<p><em>Dynexcel Logo from the module static description assets.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-scenarios">Validation scenarios<a href="#validation-scenarios" class="hash-link" aria-label="Direct link to Validation scenarios" title="Direct link to Validation scenarios" translate="no">​</a></h2>
+<ul>
+<li class="">Install the module and confirm that all declared dependencies are available.</li>
+<li class="">Confirm the detected menus and primary workflow with a test user.</li>
+<li class="">Verify access with the intended user groups and a restricted user.</li>
+<li class="">Confirm reports, scheduled actions, integrations, or portal behavior only when those source components are present.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h2>
+<ul>
+<li class="">This page documents branch source and description assets; it is not proof of a successful live installation or deployment.</li>
+<li class="">Feature availability can differ by Odoo version, dependencies, company configuration, and user access rules.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-09-22T15:02:20.000Z" itemprop="dateModified">Sep 22, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/odoo/18/point-of-sale/de_pos_fbr_connector/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">POS FBR Connector</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/odoo/18/sales/industries/de_school_assignment/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Openrol - Assignment</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#source-backed-description" class="table-of-contents__link toc-highlight">Source-backed description</a><ul><li><a href="#automated-reporting" class="table-of-contents__link toc-highlight">Automated Reporting,</a></li><li><a href="#fbr-e-invoicing" class="table-of-contents__link toc-highlight">FBR E-Invoicing,</a></li><li><a href="#seamless-compliance" class="table-of-contents__link toc-highlight">Seamless Compliance</a></li><li><a href="#what-is-this-module" class="table-of-contents__link toc-highlight">What is this module?</a></li><li><a href="#fbr-e-invoicing-for-odoo-sales" class="table-of-contents__link toc-highlight">FBR E-Invoicing for Odoo Sales</a></li><li><a href="#-automated-submission" class="table-of-contents__link toc-highlight">🧾 Automated Submission</a></li><li><a href="#️-automatic-fee-handling" class="table-of-contents__link toc-highlight">⚙️ Automatic Fee Handling</a></li><li><a href="#-retry--audit-logging" class="table-of-contents__link toc-highlight">🔄 Retry &amp; Audit Logging</a></li><li><a href="#key-capabilities" class="table-of-contents__link toc-highlight">Key Capabilities</a></li><li><a href="#everything-built-in" class="table-of-contents__link toc-highlight">Everything Built In</a></li><li><a href="#fbr-fee-management" class="table-of-contents__link toc-highlight">FBR Fee Management</a></li><li><a href="#pct-code-tracking" class="table-of-contents__link toc-highlight">PCT Code Tracking</a></li><li><a href="#smart-retry-logic" class="table-of-contents__link toc-highlight">Smart Retry Logic</a></li><li><a href="#complete-audit-trail" class="table-of-contents__link toc-highlight">Complete Audit Trail</a></li><li><a href="#manager-safe-access" class="table-of-contents__link toc-highlight">Manager-Safe Access</a></li><li><a href="#manual-resend-actions" class="table-of-contents__link toc-highlight">Manual Resend Actions</a></li><li><a href="#flexible-configuration" class="table-of-contents__link toc-highlight">Flexible Configuration</a></li><li><a href="#shared-base-connector" class="table-of-contents__link toc-highlight">Shared Base Connector</a></li><li><a href="#company-level-settings" class="table-of-contents__link toc-highlight">Company-Level Settings</a></li><li><a href="#setup-workflow-and-architecture" class="table-of-contents__link toc-highlight">Setup Workflow and Architecture</a></li><li><a href="#three-steps-to-go-live" class="table-of-contents__link toc-highlight">Three Steps to Go Live</a></li><li><a href="#full-module-demo" class="table-of-contents__link toc-highlight">Full Module Demo</a></li><li><a href="#documentation-and-guidance" class="table-of-contents__link toc-highlight">Documentation and Guidance</a></li><li><a href="#everything-you-need-to-get-started" class="table-of-contents__link toc-highlight">Everything You Need to Get Started</a></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#installation-steps" class="table-of-contents__link toc-highlight">Installation Steps</a></li><li><a href="#post-installation" class="table-of-contents__link toc-highlight">Post-Installation</a></li><li><a href="#key-settings" class="table-of-contents__link toc-highlight">Key Settings</a></li><li><a href="#product-setup" class="table-of-contents__link toc-highlight">Product Setup</a></li><li><a href="#sale-order-to-fbr-flow" class="table-of-contents__link toc-highlight">Sale Order to FBR Flow</a></li><li><a href="#invoice-output" class="table-of-contents__link toc-highlight">Invoice Output</a></li><li><a href="#submission-retry" class="table-of-contents__link toc-highlight">Submission Retry</a></li><li><a href="#audit-trail" class="table-of-contents__link toc-highlight">Audit Trail</a></li><li><a href="#security--access" class="table-of-contents__link toc-highlight">Security &amp; Access</a></li><li><a href="#user-roles" class="table-of-contents__link toc-highlight">User Roles</a></li><li><a href="#data-protection" class="table-of-contents__link toc-highlight">Data Protection</a></li><li><a href="#scheduled-actions-crons" class="table-of-contents__link toc-highlight">Scheduled Actions (Crons)</a></li><li><a href="#server-actions" class="table-of-contents__link toc-highlight">Server Actions</a></li><li><a href="#frequently-asked-questions" class="table-of-contents__link toc-highlight">Frequently Asked Questions</a></li><li><a href="#is-this-compatible-with-odoo-community" class="table-of-contents__link toc-highlight">Is this compatible with Odoo Community?</a></li><li><a href="#do-i-need-the-base-connector" class="table-of-contents__link toc-highlight">Do I need the base connector?</a></li><li><a href="#can-it-coexist-with-pos-fbr-connector" class="table-of-contents__link toc-highlight">Can it coexist with POS FBR Connector?</a></li><li><a href="#what-happens-if-fbr-api-is-down" class="table-of-contents__link toc-highlight">What happens if FBR API is down?</a></li></ul></li><li><a href="#dependencies-and-prerequisites" class="table-of-contents__link toc-highlight">Dependencies and prerequisites</a></li><li><a href="#installation-and-configuration" class="table-of-contents__link toc-highlight">Installation and configuration</a></li><li><a href="#source-backed-workflows" class="table-of-contents__link toc-highlight">Source-backed workflows</a></li><li><a href="#technical-notes-and-access-review" class="table-of-contents__link toc-highlight">Technical notes and access review</a></li><li><a href="#screenshots" class="table-of-contents__link toc-highlight">Screenshots</a><ul><li><a href="#dynexcel-icon" class="table-of-contents__link toc-highlight">Dynexcel Icon</a></li><li><a href="#dynexcel-logo" class="table-of-contents__link toc-highlight">Dynexcel Logo</a></li></ul></li><li><a href="#validation-scenarios" class="table-of-contents__link toc-highlight">Validation scenarios</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/odoo/20/">Odoo 20</a></li><li class="footer__item"><a class="footer__link-item" href="/odoo/19/">Odoo 19</a></li><li class="footer__item"><a class="footer__link-item" href="/odoo/18/">Odoo 18</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Dynexcel</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dynexcel.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Dynexcel.</div></div></div></footer></div>
+</body>
+</html>

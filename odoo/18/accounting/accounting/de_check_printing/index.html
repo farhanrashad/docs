@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-odoo18 docs-version-current docs-doc-page docs-doc-id-accounting/accounting/de_check_printing/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Bank Check Printing Designer | Dynexcel Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.dynexcel.com/img/dynexcel-logo-black.png"><meta data-rh="true" name="twitter:image" content="https://docs.dynexcel.com/img/dynexcel-logo-black.png"><meta data-rh="true" property="og:url" content="https://docs.dynexcel.com/odoo/18/accounting/accounting/de_check_printing/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-odoo18-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-odoo18-current"><meta data-rh="true" property="og:title" content="Bank Check Printing Designer | Dynexcel Documentation"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/img/dynexcel-logo-black.png"><link data-rh="true" rel="canonical" href="https://docs.dynexcel.com/odoo/18/accounting/accounting/de_check_printing/"><link data-rh="true" rel="alternate" href="https://docs.dynexcel.com/odoo/18/accounting/accounting/de_check_printing/" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.dynexcel.com/odoo/18/accounting/accounting/de_check_printing/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Bank Check Printing Designer","item":"https://docs.dynexcel.com/odoo/18/accounting/accounting/de_check_printing/"}]}</script><link rel="stylesheet" href="/assets/css/styles.77aa5478.css">
+<script src="/assets/js/runtime~main.1fe85bdb.js" defer="defer"></script>
+<script src="/assets/js/main.573be6bd.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/dynexcel-logo-black.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/dynexcel-logo-black.png" alt="Dynexcel" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/dynexcel-logo-black.png" alt="Dynexcel" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item version-switcher"><span class="version-switcher__label">Version</span><select aria-label="Select Odoo documentation version"><option value="20">Odoo <!-- -->20</option><option value="19">Odoo <!-- -->19</option><option value="18" selected="">Odoo <!-- -->18</option></select><a class="version-switcher__fallback" aria-label="Odoo 18" href="/odoo/18/?unavailable=accounting">Odoo <!-- -->18</a></div><a href="https://dynexcel.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Dynexcel.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/odoo/18/"><span class="linkLabel_WmDU">Odoo 18 Home</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/odoo/18/hr-workforce/"><span class="categoryLinkLabel_W154">HR &amp; Workforce</span></a><button aria-label="Expand sidebar category &#x27;HR &amp; Workforce&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/odoo/18/integrations/"><span class="categoryLinkLabel_W154">Delivery and Courier Integrations</span></a><button aria-label="Collapse sidebar category &#x27;Delivery and Courier Integrations&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/dx_pakship/"><span class="linkLabel_WmDU">PakShip</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/dx_postex_connector/"><span class="linkLabel_WmDU">PostEx Delivery</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/de_postex_connector_extend/"><span class="linkLabel_WmDU">PostEx Shipment Items</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/integrations/dx_tcs_connector/"><span class="linkLabel_WmDU">TCS Delivery</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/odoo/18/accounting/accounting/de_check_printing/"><span class="categoryLinkLabel_W154">Accounting</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/odoo/18/accounting/accounting/de_check_printing/"><span class="categoryLinkLabel_W154">Accounting</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/odoo/18/accounting/accounting/de_check_printing/"><span class="linkLabel_WmDU">Bank Check Printing Designer</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/accounting/accounting/dx_account_reports_signature/"><span class="linkLabel_WmDU">Journal Report Signatures</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/accounting/de_bank_transfer/"><span class="linkLabel_WmDU">Bank Transfer</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/accounting/de_digital_invoicing/"><span class="linkLabel_WmDU">Digital Invoicing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/odoo/18/accounting/dx_account_pdc/"><span class="linkLabel_WmDU">Accounting - Post Dated Cheques</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/crm/sale/industries/de_school_admission/"><span class="categoryLinkLabel_W154">Crm</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/dynexcel/de_school_fees/"><span class="categoryLinkLabel_W154">Dynexcel</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/hidden/de_fbr_connector/"><span class="categoryLinkLabel_W154">Hidden</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/human-resources/dx_workforce_shift_management/"><span class="categoryLinkLabel_W154">Human Resources</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/inventory/de_stock_report/"><span class="categoryLinkLabel_W154">Inventory</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/point-of-sale/de_pos_fbr_connector/"><span class="categoryLinkLabel_W154">Point Of Sale</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/sales/de_sale_fbr_connector/"><span class="categoryLinkLabel_W154">Sales</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/school/crm/industries/de_school_team/"><span class="categoryLinkLabel_W154">School</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/services/helpdesk/de_helpdesk/"><span class="categoryLinkLabel_W154">Services</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/odoo/18/integrations/de_zkteco_attend/"><span class="categoryLinkLabel_W154">Attendance Integrations</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Accounting</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Accounting</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Bank Check Printing Designer</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Bank Check Printing Designer</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Technical module: <code>de_check_printing</code></p>
+<p>This Odoo 18 manual is derived from the module manifest, source files, and the module App Store description. Verify the exact installed build before production use.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-backed-description">Source-backed description<a href="#source-backed-description" class="hash-link" aria-label="Direct link to Source-backed description" title="Direct link to Source-backed description" translate="no">​</a></h2>
+<p>Advanced Cheque Printing for Odoo</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bank-specific">Bank-Specific,<a href="#bank-specific" class="hash-link" aria-label="Direct link to Bank-Specific," title="Direct link to Bank-Specific," translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-layouts">Visual Layouts,<a href="#visual-layouts" class="hash-link" aria-label="Direct link to Visual Layouts," title="Direct link to Visual Layouts," translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="zero-margins">Zero Margins<a href="#zero-margins" class="hash-link" aria-label="Direct link to Zero Margins" title="Direct link to Zero Margins" translate="no">​</a></h3>
+<p>Extend Odoo&#x27;s native check printing with a visual designer for pre-printed or blank cheque stock. Configure millimetre-perfect positioning, dynamic paper sizes, and audit-ready snapshots — without modifying core code.
+Explore Features Read Manual
+Odoo 18 Community Edition
+OWL Visual Designer
+QWeb Dynamic Reports
+Cheque Layout HBL Vendor Cheque 210mm x 90mm / Landscape
+ACTIVE
+Mode Pre-Printed
+Date Format DD/MM/YYYY
+Words Lang English
+Payee Name
+X: 45mm
+Visible
+Amount
+X: 120mm
+Date (Box Mode)
+X: 150mm
+1-Digit/Box
+J Journal</p>
+<blockquote>
+</blockquote>
+<p>L Layout
+P Payment
+PDF Report</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-this-module">What is this module?<a href="#what-is-this-module" class="hash-link" aria-label="Direct link to What is this module?" title="Direct link to What is this module?" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-cheque-layouts-for-odoo-accounting">Visual Cheque Layouts for Odoo Accounting<a href="#visual-cheque-layouts-for-odoo-accounting" class="hash-link" aria-label="Direct link to Visual Cheque Layouts for Odoo Accounting" title="Direct link to Visual Cheque Layouts for Odoo Accounting" translate="no">​</a></h3>
+<p>This module extends Odoo&#x27;s native account_check_printing workflow by separating cheque data from positioning. Users configure reusable layouts per bank journal, position fields visually using an OWL drag-and-drop designer, and print payments using dynamic paper sizes tailored to each bank&#x27;s cheque stock.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-visual-designer">🎨 Visual Designer<a href="#-visual-designer" class="hash-link" aria-label="Direct link to 🎨 Visual Designer" title="Direct link to 🎨 Visual Designer" translate="no">​</a></h3>
+<p>Drag, drop, resize, and align fields on a cheque canvas with 1mm snapping. Preview sample values and test print before production use.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-dynamic-paper-sizes">📏 Dynamic Paper Sizes<a href="#-dynamic-paper-sizes" class="hash-link" aria-label="Direct link to 📏 Dynamic Paper Sizes" title="Direct link to 📏 Dynamic Paper Sizes" translate="no">​</a></h3>
+<p>Define exact cheque dimensions in millimetres. The module creates custom Odoo paperformats automatically, ensuring zero-margin PDF output that matches physical stock.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-audit--reprint-control">🔒 Audit &amp; Reprint Control<a href="#-audit--reprint-control" class="hash-link" aria-label="Direct link to 🔒 Audit &amp; Reprint Control" title="Direct link to 🔒 Audit &amp; Reprint Control" translate="no">​</a></h3>
+<p>Every print captures a layout snapshot, timestamp, user, and print count. Reprinting requires explicit authorization via the &#x27;Unmark Sent&#x27; action restricted to a security group.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-capabilities">Key Capabilities<a href="#key-capabilities" class="hash-link" aria-label="Direct link to Key Capabilities" title="Direct link to Key Capabilities" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="everything-built-in">Everything Built In<a href="#everything-built-in" class="hash-link" aria-label="Direct link to Everything Built In" title="Direct link to Everything Built In" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-printed--blank-stock">Pre-Printed &amp; Blank Stock<a href="#pre-printed--blank-stock" class="hash-link" aria-label="Direct link to Pre-Printed &amp; Blank Stock" title="Direct link to Pre-Printed &amp; Blank Stock" translate="no">​</a></h3>
+<p>Supports both pre-printed cheque stock (field-only overlay) and full-background printing on blank paper. Toggle mode per layout.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="date-box-mode">Date Box Mode<a href="#date-box-mode" class="hash-link" aria-label="Direct link to Date Box Mode" title="Direct link to Date Box Mode" translate="no">​</a></h3>
+<p>Special handling for banks with pre-printed date boxes. Places one digit per box with no separators, or uses normal text format for standard cheques.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="amount-in-words-locale">Amount in Words Locale<a href="#amount-in-words-locale" class="hash-link" aria-label="Direct link to Amount in Words Locale" title="Direct link to Amount in Words Locale" translate="no">​</a></h3>
+<p>Select the language/locale for amount-in-words conversion. Supports multiple currencies and their specific unit/subunit labels configured in Odoo.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="company-isolation">Company Isolation<a href="#company-isolation" class="hash-link" aria-label="Direct link to Company Isolation" title="Direct link to Company Isolation" translate="no">​</a></h3>
+<p>Layouts are isolated by company. Each bank journal can only select layouts belonging to its own company, preventing cross-company misconfiguration.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="safe-field-palette">Safe Field Palette<a href="#safe-field-palette" class="hash-link" aria-label="Direct link to Safe Field Palette" title="Direct link to Safe Field Palette" translate="no">​</a></h3>
+<p>Fixed set of controlled fields including payee, amount, date, memo, references, and static text. No arbitrary Python expressions or unsafe field paths.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="single--batch-print">Single &amp; Batch Print<a href="#single--batch-print" class="hash-link" aria-label="Direct link to Single &amp; Batch Print" title="Direct link to Single &amp; Batch Print" translate="no">​</a></h3>
+<p>Print individual vendor payments or batch print multiple payments from the same bank journal. Mixed journals are rejected to ensure consistent layout usage.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="layout-snapshot">Layout Snapshot<a href="#layout-snapshot" class="hash-link" aria-label="Direct link to Layout Snapshot" title="Direct link to Layout Snapshot" translate="no">​</a></h3>
+<p>Each printed payment stores a snapshot of the layout configuration at print time, ensuring auditability even if the layout is later modified.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="reprint-protection">Reprint Protection<a href="#reprint-protection" class="hash-link" aria-label="Direct link to Reprint Protection" title="Direct link to Reprint Protection" translate="no">​</a></h3>
+<p>After printing, payments are marked as sent. Only users in the &#x27;Authorized Check Reprint&#x27; group can unmark sent status for controlled reprinting.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup-workflow-and-architecture">Setup Workflow and Architecture<a href="#setup-workflow-and-architecture" class="hash-link" aria-label="Direct link to Setup Workflow and Architecture" title="Direct link to Setup Workflow and Architecture" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="from-layout-to-printed-cheque">From Layout to Printed Cheque<a href="#from-layout-to-printed-cheque" class="hash-link" aria-label="Direct link to From Layout to Printed Cheque" title="Direct link to From Layout to Printed Cheque" translate="no">​</a></h3>
+<p>A clear, step-by-step process from configuring bank-specific layouts to printing vendor payments with audit trails.
+01
+Create Cheque Layout Go to Accounting → Configuration → Cheque Layouts . Enter paper dimensions, upload background scan, and configure date/amount formats.
+02
+Design Layout Use the OWL visual designer to drag, drop, resize, and align fields. Test print to verify positioning on plain paper.
+03
+Assign to Journal Open the bank journal, enable outgoing Check payment method, and select the created layout. Save the journal.
+04
+Print Payment Create or open a vendor payment using the configured journal. Click Print Check to generate the PDF and mark the payment as sent.
+Cheque Layout
+Bank Journal
+Vendor Payment
+Print Check Action
+Snapshot &amp; Audit
+Cheque PDF
+Watch It in Action</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="full-module-demo">Full Module Demo<a href="#full-module-demo" class="hash-link" aria-label="Direct link to Full Module Demo" title="Direct link to Full Module Demo" translate="no">​</a></h3>
+<p>See the complete flow — from creating a cheque layout, designing fields visually, assigning to a bank journal, and printing vendor payments with audit snapshots.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-and-guidance">Documentation and Guidance<a href="#documentation-and-guidance" class="hash-link" aria-label="Direct link to Documentation and Guidance" title="Direct link to Documentation and Guidance" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="everything-you-need-to-get-started">Everything You Need to Get Started<a href="#everything-you-need-to-get-started" class="hash-link" aria-label="Direct link to Everything You Need to Get Started" title="Direct link to Everything You Need to Get Started" translate="no">​</a></h3>
+<p>From installing prerequisites to configuring layouts, designing fields, and troubleshooting common issues — complete guides for every step.</p>
+<ul>
+<li class="">Overview</li>
+<li class="">Installation</li>
+<li class="">Create Layout</li>
+<li class="">Visual Designer</li>
+<li class="">Journal Setup</li>
+<li class="">Print Cheque</li>
+<li class="">Reprint Control</li>
+<li class="">Troubleshooting
+The Check Printing module is a standalone Odoo 18 Community addon for printing outgoing/vendor cheques on bank-specific cheque stock. It extends Odoo&#x27;s native account_check_printing workflow and does not modify Odoo core.
+The addon separates cheque data from cheque positioning. Users configure a reusable layout per bank journal, position approved fields visually, and print the payment using a dynamic cheque paper size.
+Key capabilities include:</li>
+<li class="">OWL drag/drop layout designer with resize, zoom, 1mm snapping, and alignment controls</li>
+<li class="">Dynamic QWeb PDF report with zero margins and no external header/footer</li>
+<li class="">Pre-printed cheque stock or full-background printing on blank paper</li>
+<li class="">Date format selection including one-digit-per-box mode for pre-printed date boxes</li>
+<li class="">Amount-in-words language/locale selection</li>
+<li class="">Layout snapshot, print timestamp, printing user, and print count audit fields</li>
+<li class="">Authorized reprint control through &#x27;Unmark Sent&#x27; security group</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h3>
+<p>Before installing this module, ensure the following are in place:</p>
+<ul>
+<li class="">Odoo Accounting module installed</li>
+<li class="">Odoo&#x27;s native account_check_printing module installed</li>
+<li class="">Bank journal configured for outgoing Check payments</li>
+<li class="">User has Accounting access (Check Layout Manager group required for layout creation/editing)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1-install-the-module">Step 1: Install the Module<a href="#step-1-install-the-module" class="hash-link" aria-label="Direct link to Step 1: Install the Module" title="Direct link to Step 1: Install the Module" translate="no">​</a></h3>
+<ul>
+<li class="">Add the addon directory to the Odoo addons path.</li>
+<li class="">Update the Apps List.</li>
+<li class="">Search for:</li>
+<li class="">Click Install .</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-verify-installation">Step 2: Verify Installation<a href="#step-2-verify-installation" class="hash-link" aria-label="Direct link to Step 2: Verify Installation" title="Direct link to Step 2: Verify Installation" translate="no">​</a></h3>
+<p>After installation, verify that:</p>
+<ul>
+<li class="">Module installed successfully with no errors</li>
+<li class="">Cheque Layouts menu appears under Accounting → Configuration</li>
+<li class="">Security groups are available: Check Layout Manager, Authorized Check Reprint
+Validated in Odoo 18 Community environment with focused tests passing (0 failed, 0 errors).</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-a-bank-cheque-layout">Create a Bank Cheque Layout<a href="#create-a-bank-cheque-layout" class="hash-link" aria-label="Direct link to Create a Bank Cheque Layout" title="Direct link to Create a Bank Cheque Layout" translate="no">​</a></h3>
+<p>Navigate to:
+Fill in the following fields:
+Field
+Description
+Layout Name
+Unique name within the company, e.g., &quot;HBL Vendor Cheque&quot;
+Company
+Select the company that owns the layout
+Cheque Background
+Upload a cheque scan for positioning and preview
+Print Background
+Disable for pre-printed stock; enable for full-background printing on blank paper
+Paper Width / Height
+Physical cheque size in millimetres. Suggested from image DPI or aspect ratio if background uploaded.
+Orientation
+Portrait or Landscape
+Date Format
+Bank-required date format (e.g., DD/MM/YYYY)
+Date Display
+Normal date text or One digit per box for pre-printed date boxes
+Amount Display
+Amount without currency (default) or Amount with currency
+Amount-in-Words Language
+Locale used for amount words conversion
+Save the form after entering paper details. The module will automatically create a custom report.paperformat based on the dimensions.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="use-the-layout-designer">Use the Layout Designer<a href="#use-the-layout-designer" class="hash-link" aria-label="Direct link to Use the Layout Designer" title="Direct link to Use the Layout Designer" translate="no">​</a></h3>
+<p>The designer appears under Visual Layout Designer after saving the layout.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="add-fields">Add Fields<a href="#add-fields" class="hash-link" aria-label="Direct link to Add Fields" title="Direct link to Add Fields" translate="no">​</a></h3>
+<p>Click a field in the left Fields list to add it to the canvas, or drag the field from the list onto the cheque canvas. The canvas shows sample values such as sample payee, amount, date, and cheque number.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="move-and-resize">Move and Resize<a href="#move-and-resize" class="hash-link" aria-label="Direct link to Move and Resize" title="Direct link to Move and Resize" translate="no">​</a></h3>
+<p>Drag a field to move it. Drag the small bottom-right handle to resize it. All movements and resizes snap to a 1mm grid. Use the − and + buttons to zoom the canvas for detailed positioning.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="edit-a-selected-field">Edit a Selected Field<a href="#edit-a-selected-field" class="hash-link" aria-label="Direct link to Edit a Selected Field" title="Direct link to Edit a Selected Field" translate="no">​</a></h3>
+<p>Select a field and use the right inspector to change:</p>
+<ul>
+<li class="">Label and static text</li>
+<li class="">X and Y position in millimetres</li>
+<li class="">Width and height</li>
+<li class="">Font family and size</li>
+<li class="">Line height multiplier (e.g., 1.25 or 1.3 for wrapped lines)</li>
+<li class="">Text alignment (left/center/right, top/middle/bottom)</li>
+<li class="">Text wrapping and visibility</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="date-boxes">Date Boxes<a href="#date-boxes" class="hash-link" aria-label="Direct link to Date Boxes" title="Direct link to Date Boxes" translate="no">​</a></h3>
+<p>When Date Display is set to One digit per box, select the Date field and position/resize it over the complete row of pre-printed boxes. The report removes separators and places one date digit in each equal-width slot.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="save-and-test">Save and Test<a href="#save-and-test" class="hash-link" aria-label="Direct link to Save and Test" title="Direct link to Save and Test" translate="no">​</a></h3>
+<p>Click the normal Odoo Save button. Then click Test Print in the layout header to review a sample PDF on plain paper. For pre-printed stock, place the physical cheque over the field-only test output before production use.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="assign-layout-to-bank-journal">Assign Layout to Bank Journal<a href="#assign-layout-to-bank-journal" class="hash-link" aria-label="Direct link to Assign Layout to Bank Journal" title="Direct link to Assign Layout to Bank Journal" translate="no">​</a></h3>
+<p>Perform the following steps:</p>
+<ul>
+<li class="">Confirm the journal type is Bank.</li>
+<li class="">Enable/select the outgoing native Check payment method.</li>
+<li class="">Select the required value in Check Printing Layout field.</li>
+<li class="">Save the journal.
+Note: The layout field is visible only when outgoing check printing is active. The selected layout must belong to the same company as the journal.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="print-a-vendor-cheque">Print a Vendor Cheque<a href="#print-a-vendor-cheque" class="hash-link" aria-label="Direct link to Print a Vendor Cheque" title="Direct link to Print a Vendor Cheque" translate="no">​</a></h3>
+<p>Create a vendor payment or open an existing one:</p>
+<ul>
+<li class="">Select the configured bank journal.</li>
+<li class="">Select the native outgoing Check payment method.</li>
+<li class="">Enter vendor, amount, date, memo, and payment reference.</li>
+<li class="">Click Print Check.
+Odoo&#x27;s native check flow posts a draft payment when necessary, assigns/uses the cheque number, and calls the configured cheque report. The addon then uses the journal layout, captures its snapshot, marks the payment as sent, and opens the cheque PDF.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="batch-printing">Batch Printing<a href="#batch-printing" class="hash-link" aria-label="Direct link to Batch Printing" title="Direct link to Batch Printing" translate="no">​</a></h3>
+<p>For batch printing:</p>
+<ul>
+<li class="">Select payments that use the same bank journal.</li>
+<li class="">Confirm all payments use the outgoing check method.</li>
+<li class="">Print the batch through Odoo&#x27;s native check-printing action.
+Payments from different journals are rejected because they may require different cheque layouts and paper stock. Print separate batches for separate banks.
+After a successful print, the payment is marked Sent and the normal user cannot print it again. If a reprint is genuinely required:</li>
+<li class="">Obtain the organization&#x27;s authorization.</li>
+<li class="">Ask an administrator to assign the user the Authorized Check Reprint group.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dependencies-and-prerequisites">Dependencies and prerequisites<a href="#dependencies-and-prerequisites" class="hash-link" aria-label="Direct link to Dependencies and prerequisites" title="Direct link to Dependencies and prerequisites" translate="no">​</a></h2>
+<ul>
+<li class="">Odoo version: <strong>18</strong></li>
+<li class="">Module version: <strong>18.0.1.0.12</strong></li>
+<li class="">Installable: <strong>Yes</strong></li>
+<li class="">Application module: <strong>Yes</strong></li>
+<li class="">Dependencies: <code>account_check_printing</code></li>
+</ul>
+<p>Install the declared dependencies first, then install <code>Bank Check Printing Designer</code> from Odoo Apps. Do not assume a dependency is available in another Odoo version.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installation-and-configuration">Installation and configuration<a href="#installation-and-configuration" class="hash-link" aria-label="Direct link to Installation and configuration" title="Direct link to Installation and configuration" translate="no">​</a></h2>
+<ol>
+<li class="">Place the module in an addons path for the matching Odoo version.</li>
+<li class="">Update the Apps list and install the declared dependencies.</li>
+<li class="">Install <code>Bank Check Printing Designer</code> and follow the source-backed menus and workflows below.</li>
+<li class="">Test the primary workflow with a non-production record before enabling it for users.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-backed-workflows">Source-backed workflows<a href="#source-backed-workflows" class="hash-link" aria-label="Direct link to Source-backed workflows" title="Direct link to Source-backed workflows" translate="no">​</a></h2>
+<p>Detected menu labels:</p>
+<ul>
+<li class="">Cheque Layouts</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-notes-and-access-review">Technical notes and access review<a href="#technical-notes-and-access-review" class="hash-link" aria-label="Direct link to Technical notes and access review" title="Direct link to Technical notes and access review" translate="no">​</a></h2>
+<ul>
+<li class="">Static source files: 10 Python, 8 XML, and 1 CSV.</li>
+<li class="">Detected model names: <code>de.check.layout</code>, <code>de.check.layout.field</code>, <code>report.de_check_printing.report_check_layout_preview</code>, <code>report.de_check_printing.report_check_payment</code></li>
+<li class="">Review the module security files and installed user&#x27;s Odoo groups before granting access. Static documentation cannot certify live ACLs or record rules.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="screenshots">Screenshots<a href="#screenshots" class="hash-link" aria-label="Direct link to Screenshots" title="Direct link to Screenshots" translate="no">​</a></h2>
+<p>No image files were supplied under static/description/img in this branch.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-scenarios">Validation scenarios<a href="#validation-scenarios" class="hash-link" aria-label="Direct link to Validation scenarios" title="Direct link to Validation scenarios" translate="no">​</a></h2>
+<ul>
+<li class="">Install the module and confirm that all declared dependencies are available.</li>
+<li class="">Confirm the detected menus and primary workflow with a test user.</li>
+<li class="">Verify access with the intended user groups and a restricted user.</li>
+<li class="">Confirm reports, scheduled actions, integrations, or portal behavior only when those source components are present.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h2>
+<ul>
+<li class="">This page documents branch source and description assets; it is not proof of a successful live installation or deployment.</li>
+<li class="">Feature availability can differ by Odoo version, dependencies, company configuration, and user access rules.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-09-22T15:02:20.000Z" itemprop="dateModified">Sep 22, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/odoo/18/integrations/dx_tcs_connector/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">TCS Delivery</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/odoo/18/accounting/accounting/dx_account_reports_signature/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Journal Report Signatures</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#source-backed-description" class="table-of-contents__link toc-highlight">Source-backed description</a><ul><li><a href="#bank-specific" class="table-of-contents__link toc-highlight">Bank-Specific,</a></li><li><a href="#visual-layouts" class="table-of-contents__link toc-highlight">Visual Layouts,</a></li><li><a href="#zero-margins" class="table-of-contents__link toc-highlight">Zero Margins</a></li><li><a href="#what-is-this-module" class="table-of-contents__link toc-highlight">What is this module?</a></li><li><a href="#visual-cheque-layouts-for-odoo-accounting" class="table-of-contents__link toc-highlight">Visual Cheque Layouts for Odoo Accounting</a></li><li><a href="#-visual-designer" class="table-of-contents__link toc-highlight">🎨 Visual Designer</a></li><li><a href="#-dynamic-paper-sizes" class="table-of-contents__link toc-highlight">📏 Dynamic Paper Sizes</a></li><li><a href="#-audit--reprint-control" class="table-of-contents__link toc-highlight">🔒 Audit &amp; Reprint Control</a></li><li><a href="#key-capabilities" class="table-of-contents__link toc-highlight">Key Capabilities</a></li><li><a href="#everything-built-in" class="table-of-contents__link toc-highlight">Everything Built In</a></li><li><a href="#pre-printed--blank-stock" class="table-of-contents__link toc-highlight">Pre-Printed &amp; Blank Stock</a></li><li><a href="#date-box-mode" class="table-of-contents__link toc-highlight">Date Box Mode</a></li><li><a href="#amount-in-words-locale" class="table-of-contents__link toc-highlight">Amount in Words Locale</a></li><li><a href="#company-isolation" class="table-of-contents__link toc-highlight">Company Isolation</a></li><li><a href="#safe-field-palette" class="table-of-contents__link toc-highlight">Safe Field Palette</a></li><li><a href="#single--batch-print" class="table-of-contents__link toc-highlight">Single &amp; Batch Print</a></li><li><a href="#layout-snapshot" class="table-of-contents__link toc-highlight">Layout Snapshot</a></li><li><a href="#reprint-protection" class="table-of-contents__link toc-highlight">Reprint Protection</a></li><li><a href="#setup-workflow-and-architecture" class="table-of-contents__link toc-highlight">Setup Workflow and Architecture</a></li><li><a href="#from-layout-to-printed-cheque" class="table-of-contents__link toc-highlight">From Layout to Printed Cheque</a></li><li><a href="#full-module-demo" class="table-of-contents__link toc-highlight">Full Module Demo</a></li><li><a href="#documentation-and-guidance" class="table-of-contents__link toc-highlight">Documentation and Guidance</a></li><li><a href="#everything-you-need-to-get-started" class="table-of-contents__link toc-highlight">Everything You Need to Get Started</a></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#step-1-install-the-module" class="table-of-contents__link toc-highlight">Step 1: Install the Module</a></li><li><a href="#step-2-verify-installation" class="table-of-contents__link toc-highlight">Step 2: Verify Installation</a></li><li><a href="#create-a-bank-cheque-layout" class="table-of-contents__link toc-highlight">Create a Bank Cheque Layout</a></li><li><a href="#use-the-layout-designer" class="table-of-contents__link toc-highlight">Use the Layout Designer</a></li><li><a href="#add-fields" class="table-of-contents__link toc-highlight">Add Fields</a></li><li><a href="#move-and-resize" class="table-of-contents__link toc-highlight">Move and Resize</a></li><li><a href="#edit-a-selected-field" class="table-of-contents__link toc-highlight">Edit a Selected Field</a></li><li><a href="#date-boxes" class="table-of-contents__link toc-highlight">Date Boxes</a></li><li><a href="#save-and-test" class="table-of-contents__link toc-highlight">Save and Test</a></li><li><a href="#assign-layout-to-bank-journal" class="table-of-contents__link toc-highlight">Assign Layout to Bank Journal</a></li><li><a href="#print-a-vendor-cheque" class="table-of-contents__link toc-highlight">Print a Vendor Cheque</a></li><li><a href="#batch-printing" class="table-of-contents__link toc-highlight">Batch Printing</a></li></ul></li><li><a href="#dependencies-and-prerequisites" class="table-of-contents__link toc-highlight">Dependencies and prerequisites</a></li><li><a href="#installation-and-configuration" class="table-of-contents__link toc-highlight">Installation and configuration</a></li><li><a href="#source-backed-workflows" class="table-of-contents__link toc-highlight">Source-backed workflows</a></li><li><a href="#technical-notes-and-access-review" class="table-of-contents__link toc-highlight">Technical notes and access review</a></li><li><a href="#screenshots" class="table-of-contents__link toc-highlight">Screenshots</a></li><li><a href="#validation-scenarios" class="table-of-contents__link toc-highlight">Validation scenarios</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/odoo/20/">Odoo 20</a></li><li class="footer__item"><a class="footer__link-item" href="/odoo/19/">Odoo 19</a></li><li class="footer__item"><a class="footer__link-item" href="/odoo/18/">Odoo 18</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Dynexcel</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dynexcel.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Dynexcel.</div></div></div></footer></div>
+</body>
+</html>
