@@ -74,6 +74,14 @@ function sortItems(items) {
     .map(({value}) => value);
 }
 
+function collapseRepeatedCategories(label, items) {
+  return items.flatMap((item) => (
+    item.type === 'category' && !item.link && item.label === label
+      ? item.items
+      : [item]
+  ));
+}
+
 function buildDirectoryItem(directoryPath, versionRoot, options = {}) {
   const directoryName = path.basename(directoryPath);
   const indexPath = path.join(directoryPath, 'index.md');
@@ -113,13 +121,16 @@ function buildDirectoryItem(directoryPath, versionRoot, options = {}) {
   const label = fs.existsSync(indexPath)
     ? sidebarLabel(indexPath, directoryName)
     : labelForDirectory(directoryName);
+  const visibleChildren = fs.existsSync(indexPath)
+    ? sortedChildren
+    : collapseRepeatedCategories(label, sortedChildren);
 
   if (!fs.existsSync(indexPath)) {
     return {
       type: 'category',
       label,
       collapsed: directoryName !== 'integrations',
-      items: sortedChildren,
+      items: visibleChildren,
     };
   }
 
@@ -129,7 +140,7 @@ function buildDirectoryItem(directoryPath, versionRoot, options = {}) {
     label,
   };
 
-  if (!sortedChildren.length) {
+  if (!visibleChildren.length) {
     return indexItem;
   }
 
@@ -138,7 +149,7 @@ function buildDirectoryItem(directoryPath, versionRoot, options = {}) {
     label,
     collapsed: directoryName !== 'integrations',
     link: {type: 'doc', id: indexItem.id},
-    items: sortedChildren,
+    items: visibleChildren,
   };
 }
 
