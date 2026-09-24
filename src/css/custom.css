@@ -87,6 +87,109 @@
   margin-bottom: 0;
 }
 
+.landing-page,
+.version-page {
+  align-items: center;
+  display: flex;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  padding: 4rem 1.5rem;
+}
+
+.landing-page__content,
+.version-page__content {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+  width: 100%;
+}
+
+.landing-page__eyebrow {
+  color: var(--ifm-color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.landing-page h1,
+.version-page h1 {
+  color: var(--ifm-heading-color);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.landing-page__intro {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.1rem;
+  margin: 0 auto 2rem;
+  max-width: 680px;
+}
+
+.landing-page__supporting-link {
+  margin: 1rem 0 0;
+}
+
+.version-page {
+  align-items: flex-start;
+  padding-top: 5rem;
+}
+
+.version-card-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.version-card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.85rem;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  min-height: 190px;
+  padding: 1.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.version-card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 10px 28px rgba(75, 38, 71, 0.12);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.version-card h2 {
+  color: var(--ifm-heading-color);
+  margin-bottom: 0.65rem;
+}
+
+.version-card p {
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.version-card__badge {
+  align-self: flex-start;
+  background: var(--ifm-color-primary);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  padding: 0.25rem 0.65rem;
+}
+
+.version-card__action {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
 .unavailable-notice {
   border-left: 4px solid #d28b25;
   background: #fff8e8;
